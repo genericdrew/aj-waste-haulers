@@ -1,0 +1,49 @@
+slug: grease-trap-pumping
+name: "Grease Trap Cleaning"
+audience: "commercial"
+meta_title: "Grease Trap Cleaning in Austin & Central Texas | 90-Day Compliance | AJ"
+meta_description: "Austin requires grease trap pumping every 90 days. AJ runs the schedule, pumps the trap, documents the haul, and keeps your kitchen compliant with City of Austin FOG rules."
+hero:
+  eyebrow: "Restaurants & Commercial Kitchens"
+  headline: "90 days. We'll keep the calendar."
+  body: "Austin's FOG program requires grease trap pumping every 90 days — or sooner if solids hit 50% of the trap's wetted height. We run the schedule, pump during slow hours, and leave the paperwork an inspector can actually read."
+what_we_do:
+  heading: "Full grease trap service"
+  body: "Interior under-sink traps, exterior in-ground interceptors, automatic grease recovery units — we service them all. Pumpout is start-to-finish: full removal of grease, solids, and liquid waste down to the wetted walls."
+  bullets:
+    - "Fixed 90-day pumping schedule with reminders"
+    - "Interior and exterior traps and interceptors"
+    - "After-hours and overnight service available"
+    - "Printed service record on-site + PDF emailed"
+    - "Compliance documentation for City of Austin FOG inspectors"
+    - "Line cleaning and high-pressure water flush on request"
+compliance:
+  heading: "Austin's rules in plain English"
+  body: "If you run a food service business inside Austin city limits, grease trap pumping isn't optional. The rule: pump every 90 days or when grease/solids reach 50% wetted height. Fines run up to $2,000 per violation, and repeat offenders can be required to pump more often at their own cost."
+  cta: "Full compliance guide"
+  cta_href: "/grease-trap-compliance/"
+audiences_served:
+  heading: "Who we service"
+  items:
+    - "Full-service restaurants and food trucks with brick-and-mortar kitchens"
+    - "Bakeries, commissaries, and catering kitchens"
+    - "Grocery store prepared-food operations"
+    - "Hotel and event venue kitchens"
+    - "Hospital and school cafeterias"
+faqs:
+  - question: "What's the difference between a 90-day pump and a line flush?"
+    answer: "Pumping removes everything in the trap. A line flush uses high-pressure water to clear grease buildup in the pipes running to and from the trap. We do both. Most restaurants need the pump quarterly and the flush annually — we'll tell you if yours needs more."
+  - question: "Can you service our location without closing the kitchen?"
+    answer: "Most of our commercial work happens overnight or between breakfast and lunch. Tell us your slow hours and we'll fit the schedule around them."
+  - question: "What if we're outside Austin city limits?"
+    answer: "Other jurisdictions have their own rules — generally less strict than Austin's, but most follow a 90-day or 'when 25–50% full' standard. We can advise on your local requirements."
+  - question: "Do you handle lift station pumping for restaurants?"
+    answer: "Yes, when the lift station is part of a commercial food service setup. Ask when you call and we'll scope the job."
+related:
+  - "beverage-industry-waste"
+  - "emergency-pumping"
+cta:
+  primary: "Get on a 90-Day Schedule"
+  primary_href: "/contact/"
+  secondary: "Call (512) 956-0047"
+  secondary_href: "tel:+15129560047"

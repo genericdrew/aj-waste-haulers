@@ -1,0 +1,101 @@
+{{ define "main" }}
+{{- $slug := .File.BaseFileName -}}
+{{- $c := index site.Data.locations.cities $slug -}}
+{{- $svcs := site.Data.services -}}
+{{- if not $c -}}{{ errorf "No city data for slug %q" $slug }}{{- end -}}
+<article>
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">{{ $c.hero.eyebrow }}</span>
+      <h1>{{ $c.hero.headline }}</h1>
+      <p class="page-hero__body">{{ $c.hero.body }}</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container container-narrow prose">
+      <h2>{{ $c.local_context.heading }}</h2>
+      <p>{{ $c.local_context.body }}</p>
+
+      {{- with $c.local_context.callouts }}
+      {{- range . }}
+      <div class="callout">
+        <h4>{{ .title }}</h4>
+        <p>{{ .body }}</p>
+      </div>
+      {{- end }}
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="section section-bone">
+    <div class="container container-narrow prose">
+      <h2>{{ $c.neighborhoods.heading }}</h2>
+      <p>{{ $c.neighborhoods.body }}</p>
+      <ul class="bullet-list">
+        {{- range $c.neighborhoods.items }}<li>{{ . }}</li>{{- end }}
+      </ul>
+
+      {{- with $c.landmarks_served }}
+      <h2>{{ .heading }}</h2>
+      <p>{{ .body }}</p>
+      {{- with .named_venues }}
+      <ul class="bullet-list">
+        {{- range . }}<li>{{ . }}</li>{{- end }}
+      </ul>
+      {{- end }}
+      {{- end }}
+
+      <h2>{{ $c.typical_jobs.heading }}</h2>
+      <ul class="bullet-list">
+        {{- range $c.typical_jobs.items }}<li>{{ . }}</li>{{- end }}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-narrow">
+      <h2>{{ site.Data.content.ui.service_detail_services_to_city }} {{ $c.name }}</h2>
+      <div class="services-index-grid">
+        {{- range $c.related_services }}
+        {{- $svc := index $svcs . }}
+        <a href="/services/{{ $svc.slug }}/" class="service-card">
+          <h3 class="service-card__title">{{ $svc.name }}</h3>
+          <p class="service-card__body">{{ $svc.hero.body | truncate 140 }}</p>
+          <span class="service-card__link">Learn more</span>
+        </a>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+
+  {{ partial "sections/cta-banner.html" . }}
+</article>
+{{ end }}
+
+{{ define "schema" }}
+{{- $slug := .File.BaseFileName -}}
+{{- $c := index site.Data.locations.cities $slug -}}
+{{- $site := site.Data.content.site -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ $site.legal_name }} — {{ $c.name }} Service",
+  "parentOrganization": { "@id": "{{ site.BaseURL }}#business" },
+  "url": "{{ .Permalink }}",
+  "telephone": "{{ $site.phone }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ $site.address_city }}",
+    "addressRegion": "{{ $site.address_state }}",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "{{ $c.name }}, TX",
+    "containedInPlace": { "@type": "AdministrativeArea", "name": "{{ $c.county }}" }
+  }
+}
+</script>
+{{ end }}

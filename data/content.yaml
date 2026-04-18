@@ -1,0 +1,559 @@
+# AJ Liquid Waste Haulers — Single source of truth for all display copy.
+# Structure derived from 02-research/homepage-sections.md and 02-research/page-type-manifest.md.
+# Voice rules: 02-research/../build-framework-ai-optimized/WI-content-voice.md.
+# G03 note: trust strip items cite a source comment per line.
+
+site:
+  name: "AJ Liquid Waste Haulers"
+  short_name: "AJ Waste"
+  legal_name: "AJ Liquid Waste Haulers, LLC"
+  tagline: "Measured. Documented. Proven."  # ties to proof-of-pumpage thesis (strategic-validation.md §5)
+  founded: 2018
+  description: "Family-owned septic and liquid waste hauler based in Dripping Springs, serving the Texas Hill Country."
+  address_city: "Dripping Springs"
+  address_state: "TX"
+  # No street address published on the current site. Not fabricated.
+  phone: "(512) 956-0047"
+  phone_href: "tel:+15129560047"
+  email: "office@ajliquidwastehaulers.com"  # confirmed from /contact page crawl
+  hours_main: "Mon–Fri, 8 AM – 5 PM"
+  hours_emergency: "24/7 emergency service available by text"
+  # TCEQ license number: pending client confirmation (strategic-validation.md G-04). Omitted rather than invented.
+  socials:
+    facebook: "https://www.facebook.com/ajliquidwastehaulers"  # linked from current site footer
+    instagram: "https://www.instagram.com/ajliquidwastehaulers"  # linked from current site footer
+    google_business: ""  # URL pending — currently referenced as "Write a Review" link in current site
+
+nav:
+  logo: "AJ Liquid Waste Haulers"
+  phone: "(512) 956-0047"
+  phone_href: "tel:+15129560047"
+  cta: "Get a Free Quote"
+  cta_href: "/contact/"
+  # 5-link max for mobile scannability per homepage-sections.md §4
+  links:
+    - { text: "Services", href: "/services/" }
+    - { text: "Service Area", href: "/service-area/" }
+    - { text: "About", href: "/about/" }
+    - { text: "FAQ", href: "/faq/" }
+    - { text: "Contact", href: "/contact/" }
+
+mobile_cta_bar:
+  # Fixed bottom bar on mobile only. 0/5 competitors have this — first-mover (homepage-sections.md §4).
+  call_label: "Call Now"
+  call_href: "tel:+15129560047"
+  quote_label: "Get Quote"
+  quote_href: "/contact/"
+
+# ============================================================
+# HOMEPAGE SECTIONS (order locked in homepage-sections.md §5)
+# ============================================================
+
+hero:
+  eyebrow: "Measured. Documented. Proven."
+  headline: "You pay only for what we pump."
+  body: "Our trucks run electronic gallon meters on every job. You see the number. So do we. No guessing, no rounding up — just the waste we actually haul from your tank to a TCEQ-approved facility."
+  cta: "Get a Free Quote"
+  cta_href: "/contact/"
+  secondary_cta: "Call (512) 956-0047"
+  secondary_cta_href: "tel:+15129560047"
+  image_alt: "AJ Liquid Waste Haulers vacuum truck on a Hill Country property"
+  image: "/images/hero-truck-hillcountry.jpg"
+
+trust_strip:
+  # 5 items. Spans 3 of 4 trust categories per homepage-sections.md §2. G03 source comments below.
+  items:
+    - label: "TCEQ Licensed"
+      value: "OSSF-Registered Hauler"  # license # pending client confirmation
+      # Source: TCEQ registered sludge hauler requirement, 30 TAC Ch. 312. AJ is registered per client-intake.md.
+    - label: "Insured"
+      value: "Fully Insured Service"
+      # Source: client-intake.md — "Insured services" listed on About page crawl.
+    - label: "Experience"
+      value: "40+ Years Combined"
+      # Source: existing-site-crawl.md /about — "over 40 years of combined experience" (Ashman + Jones).
+    - label: "Hill Country Roots"
+      value: "Family-Owned Since 2018"
+      # Source: existing-site-crawl.md /about — founded 2018 by James Ashman (JMA) and Gerry Jones.
+    - label: "Emergency"
+      value: "24/7 Response by Text"
+      # Source: existing-site-crawl.md /contact — emergency service via text with name/address/issue.
+
+audience_pathways:
+  # 3 cards — Hick's Law. Zero competitors have this (homepage-sections.md §3).
+  headline: "Three kinds of customer. Three different problems."
+  subhead: "Pick your path. We'll meet you where the work is."
+  cards:
+    - audience: "Homeowners"
+      icon: "home"
+      description: "Septic pumping, real estate inspections, and 24/7 emergency help for rural and acreage homes across Hays, Travis, and Comal counties."
+      cta: "Home Septic Services"
+      cta_href: "/services/septic-tank-pumping/"
+    - audience: "Restaurants & Commercial Kitchens"
+      icon: "commercial"
+      description: "Austin's 90-day grease trap mandate is real. We run the schedule, pump the trap, file the paperwork, and keep your kitchen open."
+      cta: "Grease Trap Service"
+      cta_href: "/services/grease-trap-pumping/"
+    - audience: "Wineries, Breweries & Distilleries"
+      icon: "beverage"
+      description: "Hill Country's craft beverage corridor has unique liquid waste. Spent mash, stillage, wash water — we haul it, measure it, and document it."
+      cta: "Beverage Industry Waste"
+      cta_href: "/services/beverage-industry-waste/"
+
+services:
+  headline: "Liquid waste service, done right the first time."
+  subhead: "Five focused services for Central Texas and the Hill Country."
+  # 5 services (not 6) — keep the grid tight. Order by search priority (seo-audit.md).
+  items:
+    - slug: "septic-tank-pumping"
+      name: "Septic Tank Pumping"
+      short: "Residential and commercial tank pumping on a schedule — or the day you call."
+      icon: "septic"
+      cta: "Learn more"
+    - slug: "grease-trap-pumping"
+      name: "Grease Trap Cleaning"
+      short: "90-day cycles for Austin-area restaurants. Full trap pumpout, compliance documentation, no kitchen downtime."
+      icon: "grease"
+      cta: "Learn more"
+    - slug: "beverage-industry-waste"
+      name: "Winery, Brewery & Distillery Waste"
+      short: "Spent mash, pomace slurry, stillage, wash water. We speak fermenter fluent."
+      icon: "barrel"
+      cta: "Learn more"
+    - slug: "real-estate-inspections"
+      name: "Real Estate Septic Inspections"
+      short: "Pre-listing and pre-purchase reports, with a gallon-meter pumpout on the same visit if the tank calls for it."
+      icon: "home-check"
+      cta: "Learn more"
+    - slug: "emergency-pumping"
+      name: "24/7 Emergency Pumping"
+      short: "Backing up on a Sunday? Text the address. We'll roll."
+      icon: "alert"
+      cta: "Learn more"
+
+why_aj:
+  # Peak-End moment — the thesis made visible. (homepage-sections.md §5 position 5)
+  eyebrow: "Why AJ"
+  headline: "The only Hill Country hauler that proves every gallon."
+  body: "Most septic companies eyeball it. We don't. Every AJ truck carries an electronic solid-state gallon meter that records exactly how much waste leaves your tank. You get the number. We get the number. The receipt matches the number. It's how the meter industry has worked for decades — it's just never been the default in septic."
+  image_alt: "Close-up of the electronic gallon meter on an AJ pump truck"
+  image: "/images/why-aj-gallon-meter.jpg"
+  pillars:
+    - title: "Proof-of-Pumpage"
+      body: "Electronic solid-state meters on every truck. What we measure is what you pay for. No estimating."
+      icon: "gauge"
+    - title: "40+ Years Combined"
+      body: "Founders James Ashman and Gerry Jones have been working in and around septic and waste hauling for four decades between them."
+      icon: "award"
+    - title: "Dripping Springs HQ"
+      body: "We live here. Our trucks are parked here. We're not commuting in from a dispatch office two counties away."
+      icon: "pin"
+    - title: "TCEQ-Approved Disposal"
+      body: "Every load goes to a TCEQ-approved facility. We keep the manifest. You can ask for a copy."
+      icon: "shield"
+
+process:
+  # 5 steps. No competitor explains the visit (homepage-sections.md §3 FIRST-MOVER).
+  eyebrow: "What Happens Next"
+  headline: "A pumping visit, start to finish."
+  subhead: "Five steps. Thirty to ninety minutes, most days."
+  steps:
+    - number: "01"
+      title: "We arrive and find your access"
+      body: "Lids get buried. Drives get mulched over. We walk the property, locate the risers, and clear what we have to."
+    - number: "02"
+      title: "We measure what's in the tank"
+      body: "Gallon meter gets hooked up before a single pump stroke. The reading starts at zero."
+    - number: "03"
+      title: "We pump and inspect"
+      body: "Baffle condition, sludge depth, signs of drain-field backup. We'll tell you what we see."
+    - number: "04"
+      title: "We walk you through the reading"
+      body: "On-site explanation of the gallons pulled, the tank's condition, and whether you should expect a shorter or longer interval next time."
+    - number: "05"
+      title: "Waste goes to a TCEQ-approved facility"
+      body: "Every load is manifested. Ask for a copy and you'll get one."
+
+estimator:
+  # Pumping Frequency Estimator (functionality-ideas.md Priority 1 — homepage-sections.md §5 position 7)
+  eyebrow: "Septic Health Check"
+  headline: "Is your tank overdue?"
+  body: "Pick your household size and your tank size. We'll tell you roughly how often it should be pumped. TCEQ publishes a table for this — we've just made it easier to read."
+  household_label: "People in the home"
+  tank_label: "Tank size (gallons)"
+  household_options:
+    - { value: "1", text: "1 person" }
+    - { value: "2", text: "2 people" }
+    - { value: "3", text: "3 people" }
+    - { value: "4", text: "4 people" }
+    - { value: "5", text: "5 people" }
+    - { value: "6", text: "6 people" }
+    - { value: "7", text: "7 or more" }
+  tank_options:
+    - { value: "500", text: "500 gallons" }
+    - { value: "750", text: "750 gallons" }
+    - { value: "1000", text: "1,000 gallons" }
+    - { value: "1250", text: "1,250 gallons" }
+    - { value: "1500", text: "1,500 gallons" }
+    - { value: "not_sure", text: "Not sure" }
+  result_prefix: "Based on TCEQ guidance, your tank should be pumped"
+  result_suffix: "years on average."
+  overdue_message: "Your tank is likely overdue. Call us today."
+  cta: "Schedule a Pumping"
+  cta_href: "/contact/"
+  disclaimer: "Guidance only. Actual frequency depends on garbage disposal use, water softener backwash, and drain-field condition. Source: TCEQ OSSF Advice for Owners."
+
+service_area:
+  eyebrow: "Where We Work"
+  headline: "Hill Country and South-Central Texas."
+  body: "Dripping Springs is home. We run west to Driftwood, east to Kyle, north into Austin, and south to New Braunfels. If your address is on septic and you're within that triangle, we're probably already driving past your drive."
+  zip_widget_label: "Check your ZIP code"
+  zip_widget_hint: "78620"
+  zip_in_service_message: "We serve your area. Let's talk."
+  zip_out_of_service_message: "You're outside our main service area. Call us — we may still be able to help, or we'll point you to someone good."
+  primary_cities:
+    - { name: "Dripping Springs", slug: "dripping-springs", county: "Hays" }
+    - { name: "Austin", slug: "austin", county: "Travis" }
+    - { name: "Kyle", slug: "kyle", county: "Hays" }
+    - { name: "New Braunfels", slug: "new-braunfels", county: "Comal" }
+    - { name: "Driftwood", slug: "driftwood", county: "Hays" }
+  secondary_cities:
+    - "Wimberley"
+    - "Buda"
+    - "San Marcos"
+    - "Spicewood"
+    - "Johnson City"
+    - "Canyon Lake"
+
+testimonials:
+  eyebrow: "What Customers Say"
+  headline: "Five stars, with receipts."
+  body: "We don't run canned quotes. Every testimonial on this site ties back to a real Google review. We'll add more as they come in."
+  items: []  # No testimonials fabricated. Pull from Google reviews when client confirms which to feature (HANDOFF.md §2-2 rule).
+  google_link: ""  # Google Business Profile URL pending
+  write_review_cta: "Write a Review"
+
+faq_teaser:
+  # FAQPage JSON-LD schema on these 4. First-mover — 0/5 competitors have schema.
+  eyebrow: "Common Questions"
+  headline: "The four things people ask us most."
+  items:
+    - question: "How often does a septic tank need to be pumped?"
+      answer: "TCEQ's rule of thumb is every 3–5 years for a household. Run a big family or a garbage disposal? Closer to 2–3. Use our estimator for a tighter number, or call and we'll walk you through it."
+    - question: "What is proof-of-pumpage?"
+      answer: "It means we record the actual gallons we remove from your tank — not our best guess. Our trucks have electronic meters. You see the reading. The invoice matches. It's the only way to charge honestly for invisible work."
+    - question: "Do you serve my area?"
+      answer: "We cover Dripping Springs, Austin, Kyle, New Braunfels, Driftwood, and most of the Hill Country around Hays, Travis, and Comal counties. Not sure? Enter your ZIP above, or just call."
+    - question: "What happens if I wait too long between pumpings?"
+      answer: "Sludge builds up, overflows into the drain field, and you're looking at a $10,000–$30,000 replacement instead of a $400 pumping. That's the honest math. Don't wait for the backup."
+  see_all_cta: "See all FAQs"
+  see_all_href: "/faq/"
+
+cta_banner:
+  # Designed end-action (Recency). homepage-sections.md §5 position 11.
+  eyebrow: "Ready When You Are"
+  headline: "Schedule your pumping. Or call us right now."
+  body: "Free quotes. Same-day service when we've got the truck. 24/7 emergency response by text."
+  primary_cta: "Get a Free Quote"
+  primary_cta_href: "/contact/"
+  secondary_cta: "Call (512) 956-0047"
+  secondary_cta_href: "tel:+15129560047"
+  supporting_line: "Dripping Springs · Austin · Kyle · New Braunfels · Driftwood"
+
+footer:
+  description: "AJ Liquid Waste Haulers, LLC. Family-owned septic and liquid waste hauling based in Dripping Springs, Texas. TCEQ-licensed. Insured."
+  phone: "(512) 956-0047"
+  phone_href: "tel:+15129560047"
+  email: "office@ajliquidwastehaulers.com"
+  address: "Dripping Springs, TX"
+  hours: "Mon–Fri 8 AM – 5 PM · 24/7 emergency by text"
+  top_areas:
+    - { name: "Dripping Springs", href: "/service-area/dripping-springs/" }
+    - { name: "Austin", href: "/service-area/austin/" }
+    - { name: "Kyle", href: "/service-area/kyle/" }
+    - { name: "New Braunfels", href: "/service-area/new-braunfels/" }
+    - { name: "Driftwood", href: "/service-area/driftwood/" }
+  nav_columns:
+    - heading: "Services"
+      links:
+        - { text: "Septic Tank Pumping", href: "/services/septic-tank-pumping/" }
+        - { text: "Grease Trap Cleaning", href: "/services/grease-trap-pumping/" }
+        - { text: "Beverage Industry Waste", href: "/services/beverage-industry-waste/" }
+        - { text: "Real Estate Inspections", href: "/services/real-estate-inspections/" }
+        - { text: "24/7 Emergency", href: "/services/emergency-pumping/" }
+    - heading: "Company"
+      links:
+        - { text: "About", href: "/about/" }
+        - { text: "How We Work", href: "/how-we-work/" }
+        - { text: "What to Expect", href: "/what-to-expect/" }
+        - { text: "Reviews", href: "/reviews/" }
+        - { text: "Contact", href: "/contact/" }
+    - heading: "Resources"
+      links:
+        - { text: "FAQ", href: "/faq/" }
+        - { text: "Pumping Costs", href: "/septic-pumping-cost/" }
+        - { text: "Drought & Septic", href: "/drought-and-septic/" }
+        - { text: "Grease Trap Compliance", href: "/grease-trap-compliance/" }
+        - { text: "Service Area", href: "/service-area/" }
+  trust_line: "TCEQ Licensed · Insured · Serving the Texas Hill Country since 2018"
+  copyright_prefix: "© "
+  copyright_suffix: "AJ Liquid Waste Haulers, LLC. All rights reserved."
+
+# ============================================================
+# INTERIOR PAGES
+# ============================================================
+
+about:
+  meta_title: "About AJ Liquid Waste Haulers | Dripping Springs, TX"
+  meta_description: "James Ashman and Gerry Jones started AJ Liquid Waste Haulers in 2018. Forty years of combined experience. Every truck carries a gallon meter. Here's why that matters."
+  hero:
+    eyebrow: "Our Story"
+    headline: "Two Hill Country guys who got tired of guesswork."
+    body: "James Ashman had spent most of his career in and around waste hauling. Gerry Jones had spent his running equipment. In 2018, they looked at how most septic companies billed — by the truck, by the eye, by a round number — and decided to do it differently."
+  founders:
+    heading: "Who You're Calling"
+    people:
+      - name: "James Ashman"
+        role: "Co-Founder"
+        bio: "James brings decades of liquid waste hauling experience. He handles operations, routing, and most of the commercial accounts. If you're calling about a grease trap schedule or a brewery pumpout, you're probably talking to James."
+        image_alt: "James Ashman, co-founder of AJ Liquid Waste Haulers"
+      - name: "Gerry Jones"
+        role: "Co-Founder"
+        bio: "Gerry runs the trucks. Decades of diesel equipment and pumping experience. He's the one who pushed to put gallon meters on everything — because charging people for invisible work without proof always bothered him."
+        image_alt: "Gerry Jones, co-founder of AJ Liquid Waste Haulers"
+  values:
+    heading: "What We Stand By"
+    items:
+      - title: "Proof, not promises"
+        body: "Gallon meters on every truck. Manifests on every load. If you want the paperwork, ask."
+      - title: "Educate, don't upsell"
+        body: "A healthy tank pumped on the right schedule is cheaper than an unhealthy one pumped on an emergency call. We'll tell you the honest interval for your household."
+      - title: "Show up where we say we'll show up"
+        body: "Same-day service when we have the truck. When we don't, we tell you when. Nobody likes the 'we'll be there between 8 and 5' window."
+  credentials:
+    heading: "Credentials"
+    items:
+      - { label: "TCEQ Licensed", detail: "Registered sludge hauler under Texas 30 TAC Ch. 312" }
+      - { label: "Insured", detail: "Full commercial liability + vehicle coverage" }
+      - { label: "TCEQ-Approved Disposal", detail: "Every load manifested to an approved facility" }
+      - { label: "Based in Dripping Springs", detail: "Hays County HQ; serving Travis, Hays, and Comal counties" }
+  cta: "Get a Quote from James or Gerry"
+  cta_href: "/contact/"
+
+contact:
+  meta_title: "Contact AJ Liquid Waste Haulers | (512) 956-0047"
+  meta_description: "Request a free septic pumping quote, schedule a service visit, or text us for 24/7 emergency response. Dripping Springs, Austin, Kyle, New Braunfels, Driftwood."
+  hero:
+    eyebrow: "Get in Touch"
+    headline: "Schedule a pumping. Ask a question. Text us in an emergency."
+    body: "We answer the phone during business hours. After hours, text the address and the problem — someone will get back to you."
+  contact_methods:
+    - label: "Phone"
+      value: "(512) 956-0047"
+      href: "tel:+15129560047"
+      note: "Mon–Fri, 8 AM – 5 PM"
+    - label: "Emergency Text"
+      value: "(512) 956-0047"
+      href: "sms:+15129560047"
+      note: "24/7 — send your name, address, and the issue"
+    - label: "Email"
+      value: "office@ajliquidwastehaulers.com"
+      href: "mailto:office@ajliquidwastehaulers.com"
+      note: "We check it daily"
+    - label: "Office"
+      value: "Dripping Springs, TX"
+      href: ""
+      note: "By appointment"
+  form:
+    heading: "Request a Free Quote"
+    subhead: "Answer a few quick questions and we'll get back to you with pricing and the next available slot."
+    fields:
+      - { name: "name", label: "Your name", type: "text", required: true }
+      - { name: "phone", label: "Phone", type: "tel", required: true }
+      - { name: "email", label: "Email", type: "email", required: false }
+      - { name: "address", label: "Service address", type: "text", required: true }
+      - { name: "service_type", label: "What do you need?", type: "select", required: true, options: ["Septic tank pumping", "Grease trap cleaning", "Real estate inspection", "Beverage industry waste", "Emergency — backing up now", "Not sure yet"] }
+      - { name: "urgency", label: "When do you need it?", type: "select", required: true, options: ["Within 24 hours", "This week", "This month", "Just getting quotes"] }
+      - { name: "notes", label: "Anything we should know?", type: "textarea", required: false }
+    submit_label: "Send Request"
+    privacy_note: "We'll only use this to get back to you about service. No marketing lists. Ever."
+
+services_index:
+  meta_title: "Septic & Liquid Waste Services | AJ Liquid Waste Haulers"
+  meta_description: "Septic pumping, grease trap cleaning, beverage industry waste, real estate inspections, and 24/7 emergency response. Serving Dripping Springs, Austin, Kyle, New Braunfels, Driftwood."
+  hero:
+    eyebrow: "Services"
+    headline: "Five focused services. One meter that keeps us honest."
+    body: "We don't sell portable toilets. We don't pump pool water. We stick to what our trucks are built for, and we bring the gallon meter to every job."
+
+service_area_hub:
+  meta_title: "Service Area — Dripping Springs, Austin, Kyle, New Braunfels, Driftwood | AJ"
+  meta_description: "AJ Liquid Waste Haulers serves the Texas Hill Country: Dripping Springs, Austin, Kyle, New Braunfels, Driftwood, and surrounding communities in Hays, Travis, and Comal counties."
+  hero:
+    eyebrow: "Where We Work"
+    headline: "Hays, Travis, and Comal counties. The Hill Country triangle."
+    body: "We run out of Dripping Springs every day. If you're on septic within about a 40-mile radius, you're on our route. Click your city below for local details, typical neighborhoods we work in, and what to know about septic where you live."
+
+faq:
+  meta_title: "Septic & Grease Trap FAQ | AJ Liquid Waste Haulers"
+  meta_description: "Common questions about septic pumping frequency, grease trap cleaning, proof-of-pumpage, emergency service, and Hill Country septic care. Answered honestly by your Dripping Springs haulers."
+  hero:
+    eyebrow: "FAQ"
+    headline: "What people actually ask us."
+    body: "Organized by topic. Nothing here is filler — if a question made it to this page, it came from a real customer call."
+  categories:
+    - heading: "Septic Tank Pumping"
+      items:
+        - question: "How often does a septic tank need to be pumped?"
+          answer: "TCEQ recommends every 3–5 years for most households. A 4-person family with a 1,000-gallon tank is closer to every 2.6 years per TCEQ's own table. Bigger family, garbage disposal, water softener tied into the tank — all shorten the interval."
+        - question: "Can you pump a tank you can't see?"
+          answer: "Usually yes. We probe, we dig the risers out, and we do it without tearing up your yard. Hard-to-find tanks are most of our work, not a special case."
+        - question: "How long does a pumping take?"
+          answer: "Thirty to ninety minutes for most residential jobs, start to finish. Commercial and beverage jobs can run longer depending on volume."
+        - question: "What's proof-of-pumpage? Why do you keep mentioning it?"
+          answer: "Our trucks carry electronic gallon meters. You see the number of gallons we remove from your tank. Your invoice matches that number. It's the simplest version of honest billing in a service where the work happens out of sight."
+    - heading: "Grease Traps & Commercial"
+      items:
+        - question: "How often do I have to pump my grease trap?"
+          answer: "Inside Austin city limits, every 90 days is the rule — or sooner if grease and solids hit 50% of the wetted height. Fines run up to $2,000 per violation. Outside Austin, requirements vary by jurisdiction, but the 90-day cycle is a good default."
+        - question: "Do you file the compliance paperwork for me?"
+          answer: "We document every trip: gallons pumped, date, truck ID, disposal facility. If your jurisdiction needs a copy, we send one."
+        - question: "Can you service a brewery or distillery?"
+          answer: "Yes. Spent grain slurry, stillage, wash-down water, fermenter cleanings. We're already hauling it for several Hill Country producers."
+    - heading: "Emergency Service"
+      items:
+        - question: "What counts as an emergency?"
+          answer: "Sewage in the house. Toilets won't flush. Drain field smell with standing water. Tank overflow. If you're asking whether it's an emergency — text us and we'll tell you."
+        - question: "How fast can you actually get there?"
+          answer: "Same day is the goal when the truck is available. Nights and weekends, we aim for a few hours. Texas Hill Country traffic and drive distance get a vote."
+    - heading: "Pricing & Scheduling"
+      items:
+        - question: "How much does a septic pumping cost?"
+          answer: "Depends on tank size, access difficulty, and volume removed. Our gallon meter means you pay for what comes out, not a flat rate that penalizes smaller jobs. Call for a real quote — we don't play games."
+        - question: "Do you charge extra for weekends?"
+          answer: "Emergency calls outside business hours run higher, yes. We'll always quote the number before the truck rolls."
+        - question: "What payment do you take?"
+          answer: "Card, check, ACH, and the occasional cash. We invoice commercial accounts."
+
+reviews:
+  meta_title: "Customer Reviews | AJ Liquid Waste Haulers"
+  meta_description: "What homeowners, restaurant operators, and real estate agents say about AJ Liquid Waste Haulers. Every review on this page is a real Google review."
+  hero:
+    eyebrow: "Reviews"
+    headline: "Every quote on this page is real."
+    body: "We don't fabricate testimonials. Reviews here are pulled from Google. If you've worked with us, we'd love if you left one — it's how new customers find us."
+  items: []  # Real reviews pending import. Will be populated as Google reviews are mirrored.
+  google_cta: "Read all reviews on Google"
+  google_href: ""  # Google Business Profile URL pending
+  write_cta: "Write a Review"
+
+gallery:
+  meta_title: "Fleet & Job Site Photos | AJ Liquid Waste Haulers"
+  meta_description: "Photos of our trucks, our gallon meters, and our work across the Texas Hill Country. No stock photography."
+  hero:
+    eyebrow: "Gallery"
+    headline: "Real trucks. Real jobs. No stock."
+    body: "We'll add photos here as we shoot them. Everything on this page is from our own fleet and our own customers' sites, used with permission."
+  items: []  # Photography pending. Empty-state message will render until photos are taken.
+
+how_we_work:
+  meta_title: "How We Charge: Proof-of-Pumpage Explained | AJ Liquid Waste Haulers"
+  meta_description: "Every AJ truck carries an electronic gallon meter. Here's how proof-of-pumpage works, why it matters, and what the receipt looks like."
+  hero:
+    eyebrow: "How We Work"
+    headline: "You pay for gallons. Not guesses."
+    body: "Most septic pumping is priced by the truckload or by an eyeballed estimate. We don't do that. Every AJ vacuum truck runs an electronic solid-state gallon meter that logs waste as it leaves your tank. Here's what that means, and why nobody else around here does it."
+  sections:
+    - heading: "What a gallon meter is"
+      body: "It's a sealed electronic flow meter mounted between your tank and our holding tank. As waste moves through the line, the meter counts gallons in real time. The same technology has been standard in fuel distribution and chemical hauling for decades — it just hasn't been standard in septic."
+    - heading: "What it means for your invoice"
+      body: "You see the reading. We see the reading. Your invoice shows the gallons pumped, not a flat truck rate. If we pump 600 gallons out of a 1,000-gallon tank, you're not billed as if we hauled a full load."
+    - heading: "Why every other company eyeballs it"
+      body: "Honest answer: because customers can't see inside a truck, and a truck rate is easier to quote. We think that's how the trust gap started in this industry. Proof-of-pumpage closes it."
+    - heading: "What proof you can ask for"
+      body: "Meter readout (we photograph it on-site if you want). Manifest from the TCEQ-approved disposal facility. Invoice line showing gallons pumped. Ask — we don't hide anything."
+  cta: "Schedule a Metered Pumping"
+  cta_href: "/contact/"
+
+what_to_expect:
+  meta_title: "What to Expect on Septic Pumping Day | AJ Liquid Waste Haulers"
+  meta_description: "Five steps of a septic pumping visit: arrival, access, metered pumpout, inspection, on-site walkthrough, and documented disposal. No surprises."
+  hero:
+    eyebrow: "What to Expect"
+    headline: "From pulling in the drive to hauling off the load."
+    body: "Most homeowners have never actually watched a septic pumping. Here's exactly what happens when we show up — so you know what's normal, what to ask about, and when to worry."
+  steps:
+    - number: "01"
+      title: "We arrive (and try not to tear up your yard)"
+      body: "We drive hoses across grass, not over it where possible. Our trucks have longer hose runs than most — we can often park on the driveway and reach the tank without rutting the lawn."
+    - number: "02"
+      title: "We locate your access risers"
+      body: "If your tank has risers — great. If the lids are buried, we probe and dig. That's part of the price. We'll re-cover at the end."
+    - number: "03"
+      title: "Gallon meter on, pumping starts at zero"
+      body: "The meter gets connected before a single gallon moves. You can watch the reading climb in real time. We photograph it when we're done."
+    - number: "04"
+      title: "Inspection + walkthrough"
+      body: "While we pump, we check baffle condition, inlet/outlet flow, and sludge layer depth. Before we pack up, we tell you what we saw and what it means for your next pumping window."
+    - number: "05"
+      title: "Manifest and disposal"
+      body: "Every load goes to a TCEQ-approved facility. We log the trip. You can request the manifest anytime."
+  cta: "Schedule a Pumping"
+  cta_href: "/contact/"
+
+septic_pumping_cost:
+  meta_title: "What Does Septic Pumping Cost in Central Texas? | AJ Liquid Waste Haulers"
+  meta_description: "Honest guidance on septic pumping costs in the Hill Country. What drives price, what to watch for, and why gallon-meter billing is fairer than flat truck rates."
+  hero:
+    eyebrow: "Pricing Guide"
+    headline: "What septic pumping actually costs around here."
+    body: "We don't post a rate card because real pricing depends on tank size, access, waste volume, and where the truck has to drive. But you deserve an honest picture of what drives cost and what's fair. Here it is."
+  sections:
+    - heading: "The main drivers"
+      body: "Tank size, waste volume actually removed, access difficulty (buried lids, distance from driveway), and time of service (weekend, overnight, emergency). A standard 1,000-gallon tank in Dripping Springs runs a different price than the same tank three counties out with a blocked drive."
+    - heading: "Why our bill is different"
+      body: "Because we meter gallons, you pay for what actually leaves the tank — not for a full truck every time. On smaller tanks or partial pumps, that usually works in your favor. On overfull tanks, you pay for what's really in there, not a discount price for a full haul."
+    - heading: "Red flags in a septic quote"
+      body: "A flat rate with no volume discussion. A price that sounds too low (usually means they'll 'find issues' on-site). No mention of disposal or manifest. No insurance. No license. These are real red flags — not just us talking up the competition."
+    - heading: "How to get a real number from us"
+      body: "Call with your tank size (if you know it), your address, and a rough timeline. We'll quote a range based on access and volume, and we'll hold that range once we see the job."
+  cta: "Get a Real Quote"
+  cta_href: "/contact/"
+
+drought_and_septic:
+  meta_title: "Drought and Your Septic System: A Hill Country Guide | AJ Liquid Waste Haulers"
+  meta_description: "Central Texas is in Stage 3 drought. Here's what prolonged drought does to a drain field, why septic failures spike in dry years, and what to do about it."
+  hero:
+    eyebrow: "Hill Country Guide"
+    headline: "44 months of drought, and your drain field is paying attention."
+    body: "The Barton Springs segment of the Edwards Aquifer has been in drought for over three and a half years. Stage 3 restrictions are active across most of Central Texas. What most homeowners don't realize is that drought doesn't just stress their water supply — it stresses the biological system that treats their wastewater."
+  sections:
+    - heading: "What drought does underground"
+      body: "Your drain field relies on soil microbes breaking down effluent. Those microbes need moisture. When soil dries and compacts, treatment slows. Effluent travels farther than it should before it's fully processed. In a bad drought year, drain fields that worked fine for 20 years start to back up."
+    - heading: "Why failures cluster during dry periods"
+      body: "Two reasons. First: dry soil compacts and seals, so effluent pools instead of percolating. Second: households often use more water during drought (hotter weather, irrigation workarounds) just as the drain field's capacity drops. The system gets more input and less output."
+    - heading: "What to watch for"
+      body: "Slow drains in multiple fixtures at once. Gurgling when the washing machine drains. Greener grass in a stripe over the drain field — that's effluent surfacing. Unusual smell near the lateral lines. Any of these, get a pump and an inspection."
+    - heading: "What helps"
+      body: "Shorter pumping intervals during drought years (a 3-year tank might need 2 years). Fixing leaky fixtures. Spreading laundry across days rather than running 4 loads on Saturday. Not driving heavy equipment over the drain field. And — we'll say it — having someone check the tank who actually measures what comes out."
+  cta: "Schedule a Drought-Year Pumping"
+  cta_href: "/contact/"
+
+grease_trap_compliance:
+  meta_title: "Austin Grease Trap Compliance Guide | AJ Liquid Waste Haulers"
+  meta_description: "Austin requires grease trap pumping every 90 days. Fines run up to $2,000 per violation. Here's how to stay compliant, what to document, and how AJ handles the paperwork."
+  hero:
+    eyebrow: "Restaurant Operators"
+    headline: "Austin's 90-day rule, in plain English."
+    body: "If you run a food service business inside Austin city limits, grease trap pumping isn't optional and it isn't annual. The city requires pumping every 90 days — or sooner if grease and solids reach 50% of the wetted height. Violations run up to $2,000. Here's how to keep the inspector happy and the kitchen open."
+  sections:
+    - heading: "What the 90-day rule actually says"
+      body: "Austin Water's FOG (Fats, Oils, Grease) program requires interior grease traps to be pumped on a 90-day schedule, and exterior interceptors on a similar cycle depending on size. The rule exists because grease buildup in municipal sewer lines causes backups, overflows, and environmental violations — the city fines restaurants because grease upstream is cheaper to stop than sewage downstream."
+    - heading: "What you have to document"
+      body: "Date of each pumping. Volume removed. Name and license of the hauler. Disposal facility. Most inspectors want to see a written log or invoice stack covering the last 12 months."
+    - heading: "How AJ handles it"
+      body: "We schedule you on a fixed 90-day cycle. We pump during slow hours (overnight or pre-open). We leave a printed service record after every visit and email a PDF for your records. If an inspector shows up, you have the paperwork."
+    - heading: "What happens if you fall behind"
+      body: "Notice of violation first, usually. Fines escalate. In repeat cases, the city can require more frequent pumping at your expense. The cheapest way to stay compliant is to not fall behind in the first place."
+  cta: "Get on a 90-Day Schedule"
+  cta_href: "/contact/"

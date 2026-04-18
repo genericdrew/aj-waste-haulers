@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{- $s := site.Data.content.services_index -}}
+{{- $sv := site.Data.content.services -}}
+{{- $svcs := site.Data.services -}}
+<article>
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">{{ $s.hero.eyebrow }}</span>
+      <h1>{{ $s.hero.headline }}</h1>
+      <p class="page-hero__body">{{ $s.hero.body }}</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="services-index-grid">
+        {{- range $sv.items }}
+        {{- $svc := index $svcs .slug }}
+        <a href="/services/{{ .slug }}/" class="service-card">
+          <h3 class="service-card__title">{{ .name }}</h3>
+          <p class="service-card__body">{{ .short }}</p>
+          <span class="service-card__link">{{ .cta }}</span>
+        </a>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+
+  {{ partial "sections/cta-banner.html" . }}
+</article>
+{{ end }}

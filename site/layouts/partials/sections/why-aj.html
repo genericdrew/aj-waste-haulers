@@ -1,0 +1,48 @@
+{{- $w := site.Data.content.why_aj -}}
+{{- $icons := dict
+  "gauge" `<svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="20" r="13"/><path d="M18 20 25 13M13 20h1M22 20h1M18 15v1"/></svg>`
+  "award" `<svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="14" r="9"/><path d="M13 22 11 33l7-4 7 4-2-11"/></svg>`
+  "pin" `<svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 3c-6 0-10 4.5-10 10 0 8 10 18 10 18s10-10 10-18c0-5.5-4-10-10-10z"/><circle cx="18" cy="13" r="3"/></svg>`
+  "shield" `<svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 3 5 9v10c0 7 6 13 13 14 7-1 13-7 13-14V9L18 3z"/><path d="m13 18 4 4 7-7"/></svg>`
+-}}
+<section class="why-aj" aria-labelledby="why-aj-heading">
+  <div class="container">
+    <div class="why-aj__layout">
+      <div class="why-aj__header">
+        <span class="eyebrow">{{ $w.eyebrow }}</span>
+        <h2 id="why-aj-heading">{{ $w.headline }}</h2>
+        <p class="why-aj__body">{{ $w.body }}</p>
+      </div>
+      <div class="why-aj__image" aria-hidden="true">
+        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ $w.image_alt }}">
+          <defs>
+            <linearGradient id="meterGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#2F4870"/>
+              <stop offset="100%" stop-color="#0F1B2E"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="300" fill="url(#meterGrad)"/>
+          <g transform="translate(200 150)">
+            <circle r="90" fill="none" stroke="#FAF6EF" stroke-width="3" opacity="0.25"/>
+            <circle r="75" fill="#0F1B2E" stroke="#C07B3A" stroke-width="4"/>
+            <circle r="6" fill="#C07B3A"/>
+            <line x1="0" y1="0" x2="55" y2="-22" stroke="#FAF6EF" stroke-width="3" stroke-linecap="round"/>
+            <text text-anchor="middle" y="50" fill="#FAF6EF" font-family="Inter, sans-serif" font-weight="600" font-size="22" letter-spacing="3">GALLONS</text>
+            <text text-anchor="middle" y="-40" fill="#C07B3A" font-family="Playfair Display, serif" font-weight="700" font-size="40">472</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="why-aj__pillars">
+      {{- range $w.pillars }}
+      <div class="why-aj__pillar">
+        <span class="why-aj__pillar-icon" aria-hidden="true">{{ index $icons .icon | safeHTML }}</span>
+        <div>
+          <h3 class="why-aj__pillar-title">{{ .title }}</h3>
+          <p class="why-aj__pillar-body">{{ .body }}</p>
+        </div>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>

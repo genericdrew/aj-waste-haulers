@@ -1,0 +1,49 @@
+slug: kyle
+name: "Kyle"
+county: "Hays County"
+state: "TX"
+county_authority: "Hays County Development Services (OSSF); City of Kyle (inside CCN)"
+meta_title: "Septic Pumping in Kyle, TX | AJ Liquid Waste Haulers"
+meta_description: "Kyle's housing grew 427% in one decade — and 82% of homes were built after 2000. Tanks from that boom era are hitting their first pumping cycles. We cover Kyle. Gallon-metered."
+hero:
+  eyebrow: "Hays County Growth Corridor"
+  headline: "If your Kyle tank was installed in the 2000s, it's time."
+  body: "Kyle grew from 5,000 people to 68,000 in 25 years. Most of those homes went in between 2003 and 2015 — meaning their septic tanks are right now hitting the 15–20 year window where pumping and inspection really matter. If you've never scheduled one, you're probably overdue."
+local_context:
+  heading: "What you should know about Kyle septic"
+  body: "The majority of Kyle's established subdivisions connect to city sewer, but the outer edges — rural ETJ parcels, older acreage lots, and properties in areas where the wastewater CCN hasn't caught up with annexation — are still on private OSSF. Kyle city code prohibits new septic installs if municipal sewer is within 500 feet. Outside the CCN, Hays County rules apply, including mandatory aerobic maintenance contracts."
+  callouts:
+    - title: "The 2003–2015 build era"
+      body: "82.3% of Kyle's housing was built after 2000. Most of those properties outside the CCN have conventional septic tanks that are now 15–25 years old — the exact window when regular pumping prevents drain-field failure."
+    - title: "Plum Creek and outer subdivisions"
+      body: "Kyle's signature master-planned community Plum Creek (development began ~2002, 2,200 acres) mixes city sewer and private septic depending on phase and CCN coverage. Waterleaf, Crosswinds, and Anthem have documented septic populations."
+    - title: "Sewer expansion in progress"
+      body: "Kyle is expanding the Plum Creek Wastewater Treatment Plant from 4.5 MGD to 9 MGD (first phase November 2026, full by 2028). Some current septic customers may eventually convert to sewer — and those conversions require a final pumping and system decommissioning."
+neighborhoods:
+  heading: "Where we pump in Kyle"
+  body: "Primarily the outer ring — rural ETJ, older acreage lots on the city fringe, and the septic-served phases of the master-planned communities."
+  items:
+    - "Plum Creek (septic-phase homes)"
+    - "Waterleaf"
+    - "Crosswinds"
+    - "Anthem"
+    - "Rural ETJ acreage parcels"
+    - "I-35 commercial corridor (grease trap service)"
+typical_jobs:
+  heading: "What we do most in Kyle"
+  items:
+    - "First-time pumpings for 2003–2015 build-era tanks"
+    - "Real estate septic inspections on resales from the 2000s build wave"
+    - "Grease trap service along the I-35 retail corridor"
+    - "Emergency pumping for first-time septic homeowners unsure what's wrong"
+    - "Final pumpings and decommissioning for properties converting to city sewer"
+related_services:
+  - "septic-tank-pumping"
+  - "real-estate-inspections"
+  - "grease-trap-pumping"
+  - "emergency-pumping"
+cta:
+  primary: "Schedule a Kyle Pumping"
+  primary_href: "/contact/"
+  secondary: "Call (512) 956-0047"
+  secondary_href: "tel:+15129560047"

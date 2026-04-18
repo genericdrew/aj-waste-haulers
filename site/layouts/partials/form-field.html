@@ -1,0 +1,16 @@
+{{- $f := . -}}
+<div class="form__field">
+  <label for="field-{{ $f.name }}">{{ $f.label }}{{ if $f.required }}<span class="req" aria-hidden="true">*</span>{{ end }}</label>
+  {{- if eq $f.type "textarea" }}
+  <textarea id="field-{{ $f.name }}" name="{{ $f.name }}"{{ if $f.required }} required{{ end }}></textarea>
+  {{- else if eq $f.type "select" }}
+  <select id="field-{{ $f.name }}" name="{{ $f.name }}"{{ if $f.required }} required{{ end }}>
+    <option value="">Choose one…</option>
+    {{- range $f.options }}
+    <option value="{{ . }}">{{ . }}</option>
+    {{- end }}
+  </select>
+  {{- else }}
+  <input id="field-{{ $f.name }}" name="{{ $f.name }}" type="{{ $f.type }}"{{ if $f.required }} required{{ end }} autocomplete="{{ $f.name }}">
+  {{- end }}
+</div>

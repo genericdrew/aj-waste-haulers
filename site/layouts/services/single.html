@@ -1,0 +1,154 @@
+{{ define "main" }}
+{{- $slug := .File.BaseFileName -}}
+{{- $svc := index site.Data.services $slug -}}
+{{- $svcs := site.Data.services -}}
+{{- $allServices := site.Data.content.services.items -}}
+{{- if not $svc -}}
+  {{- errorf "No service data found for slug %q" $slug -}}
+{{- end }}
+<article>
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">{{ $svc.hero.eyebrow }}</span>
+      <h1>{{ $svc.hero.headline }}</h1>
+      <p class="page-hero__body">{{ $svc.hero.body }}</p>
+      {{- if $svc.hero.primary_cta }}
+      <div class="hero__ctas" style="margin-top: 1.5rem;">
+        <a href="{{ $svc.hero.primary_cta_href | safeURL }}" class="btn btn-primary">{{ $svc.hero.primary_cta }}</a>
+        {{- with $svc.hero.secondary_cta }}
+        <a href="{{ $svc.hero.secondary_cta_href | safeURL }}" class="btn btn-secondary">{{ . }}</a>
+        {{- end }}
+      </div>
+      {{- end }}
+    </div>
+  </header>
+
+  <section class="service-detail">
+    <div class="container">
+      <div class="service-detail__grid">
+        <div class="prose">
+          {{- with $svc.what_we_do }}
+          <h2>{{ .heading }}</h2>
+          <p>{{ .body }}</p>
+          {{- with .bullets }}
+          <ul class="bullet-list">
+            {{- range . }}<li>{{ . }}</li>{{- end }}
+          </ul>
+          {{- end }}
+          {{- end }}
+
+          {{- with $svc.when_to_pump }}
+          <h2>{{ .heading }}</h2>
+          <p>{{ .body }}</p>
+          {{- with .cta }}<p><a href="{{ $svc.when_to_pump.cta_href }}" class="btn btn-secondary">{{ . }}</a></p>{{- end }}
+          {{- end }}
+
+          {{- with $svc.compliance }}
+          <div class="callout">
+            <h4>{{ .heading }}</h4>
+            <p>{{ .body }}</p>
+            {{- with .cta }}<p style="margin-top: 0.5rem;"><a href="{{ $svc.compliance.cta_href }}">{{ . }} →</a></p>{{- end }}
+          </div>
+          {{- end }}
+
+          {{- with $svc.audiences_served }}
+          <h2>{{ .heading }}</h2>
+          <ul class="bullet-list">
+            {{- range .items }}<li>{{ . }}</li>{{- end }}
+          </ul>
+          {{- end }}
+
+          {{- with $svc.why_us }}
+          <h2>{{ .heading }}</h2>
+          {{- range .items }}
+          <div class="callout">
+            <h4>{{ .title }}</h4>
+            <p>{{ .body }}</p>
+          </div>
+          {{- end }}
+          {{- end }}
+
+          {{- with $svc.clients_served }}
+          <h2>{{ .heading }}</h2>
+          <p>{{ .body }}</p>
+          {{- end }}
+
+          {{- with $svc.what_counts }}
+          <h2>{{ .heading }}</h2>
+          <p>{{ .body }}</p>
+          <ul class="bullet-list">
+            {{- range .bullets }}<li>{{ . }}</li>{{- end }}
+          </ul>
+          {{- end }}
+
+          {{- with $svc.response }}
+          <h2>{{ .heading }}</h2>
+          <p>{{ .body }}</p>
+          {{- end }}
+
+          {{- with $svc.pumpout_note }}
+          <div class="callout">
+            <h4>{{ .heading }}</h4>
+            <p>{{ .body }}</p>
+          </div>
+          {{- end }}
+
+          {{- with $svc.for_agents }}
+          <h2>{{ .heading }}</h2>
+          <p>{{ .body }}</p>
+          <ul class="bullet-list">
+            {{- range .bullets }}<li>{{ . }}</li>{{- end }}
+          </ul>
+          {{- end }}
+
+          {{- with $svc.faqs }}
+          <h2>{{ site.Data.content.ui.service_detail_faqs_heading }}</h2>
+          {{- range . }}
+          <details class="faq-item">
+            <summary>{{ .question }}</summary>
+            <div class="faq-item__body"><p>{{ .answer }}</p></div>
+          </details>
+          {{- end }}
+          {{- end }}
+        </div>
+
+        <aside class="service-detail__aside">
+          <h3>{{ site.Data.content.ui.service_detail_aside_heading }}</h3>
+          <a href="{{ $svc.cta.primary_href | safeURL }}" class="btn btn-primary">{{ $svc.cta.primary }}</a>
+          <a href="{{ $svc.cta.secondary_href | safeURL }}" class="btn btn-secondary">{{ $svc.cta.secondary }}</a>
+
+          {{- with $svc.related }}
+          <h3 style="margin-top: 1rem;">{{ site.Data.content.ui.service_detail_related_heading }}</h3>
+          {{- range . }}
+          {{- $rel := index $svcs . }}
+          <a href="/services/{{ $rel.slug }}/" class="related-card">{{ $rel.name }}</a>
+          {{- end }}
+          {{- end }}
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "sections/cta-banner.html" . }}
+</article>
+{{ end }}
+
+{{ define "schema" }}
+{{- $slug := .File.BaseFileName -}}
+{{- $svc := index site.Data.services $slug -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ $svc.name }}",
+  "description": "{{ $svc.hero.body }}",
+  "provider": { "@id": "{{ site.BaseURL }}#business" },
+  "areaServed": [
+    {{- range $i, $c := site.Data.content.service_area.primary_cities -}}
+    {{ if $i }},{{ end }}{ "@type": "City", "name": "{{ $c.name }}, TX" }
+    {{- end -}}
+  ],
+  "url": "{{ .Permalink }}"
+}
+</script>
+{{ end }}

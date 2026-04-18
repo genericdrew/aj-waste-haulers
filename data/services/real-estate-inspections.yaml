@@ -1,0 +1,48 @@
+slug: real-estate-inspections
+name: "Real Estate Septic Inspections"
+audience: "real_estate"
+meta_title: "Real Estate Septic Inspections | Pre-Listing & Pre-Purchase | AJ"
+meta_description: "Pre-listing and pre-purchase septic inspections for Hill Country real estate transactions. Gallon-metered pumpout included if the tank calls for it. Same-day report for agents."
+hero:
+  eyebrow: "Buyers · Sellers · Agents"
+  headline: "Septic inspection that closes the deal."
+  body: "Buying or selling a home on septic in the Hill Country? A pre-transaction inspection is cheaper than a surprise during option period. We show up, pump if needed, inspect every component, and deliver a report an agent can use."
+what_we_do:
+  heading: "What's included in the inspection"
+  body: "Visual and functional inspection of the full on-site sewage facility (OSSF). We open the tank, check sludge and scum levels, test inlet and outlet baffles, inspect distribution boxes and laterals where accessible, and evaluate aerobic components if present."
+  bullets:
+    - "Tank access location and condition"
+    - "Sludge depth measurement (gallon meter on the pumpout if needed)"
+    - "Inlet and outlet baffle inspection"
+    - "Distribution box condition (where accessible)"
+    - "Aerobic unit evaluation if applicable (air pump, chlorinator, sprinklers)"
+    - "Drain field visual inspection for surfacing effluent or failures"
+    - "Written report suitable for option period or closing file"
+for_agents:
+  heading: "For real estate agents"
+  body: "We work with agents on both sides of a transaction. Same-day reports when we can. Clear written findings — not just a checklist — so you can set expectations with your client before surprises hit at closing."
+  bullets:
+    - "Fast scheduling inside option period windows"
+    - "Report format that underwriters and buyers can both read"
+    - "Optional pumpout at inspection visit (priced separately, gallon-metered)"
+    - "We'll explain findings to your buyer directly if asked"
+pumpout_note:
+  heading: "When a pumpout is part of the inspection"
+  body: "You can't properly inspect a tank that's full of sludge. If the tank needs pumping to see the baffles and measure condition, we can do both on the same visit — you pay for the inspection and the metered pumpout, not a return trip."
+faqs:
+  - question: "How fast can you get us a report?"
+    answer: "Same day for most inspections when the tank is accessible. Written report delivered by email, typically within a few hours of the visit."
+  - question: "Who pays — buyer or seller?"
+    answer: "Either, depending on the transaction. We invoice whoever booked the service."
+  - question: "What if the inspection fails?"
+    answer: "We'll document exactly what failed and why. We're not a repair company — we'll point you toward licensed installers who can scope a fix."
+  - question: "Do you pull pumping records with the inspection?"
+    answer: "We pump and document ourselves when needed. For historical records from prior owners, Hays and Comal County OSSF authorities hold permit files — we can tell you how to request them."
+related:
+  - "septic-tank-pumping"
+  - "emergency-pumping"
+cta:
+  primary: "Schedule an Inspection"
+  primary_href: "/contact/"
+  secondary: "Call (512) 956-0047"
+  secondary_href: "tel:+15129560047"

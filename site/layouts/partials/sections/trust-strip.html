@@ -1,0 +1,23 @@
+{{- $t := site.Data.content.trust_strip -}}
+{{- $icons := dict
+  "TCEQ Licensed" `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2 3 7v5c0 5 3.8 9.5 9 10 5.2-.5 9-5 9-10V7l-9-5Z"/></svg>`
+  "Insured" `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>`
+  "Experience" `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></svg>`
+  "Hill Country Roots" `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21l4-8 5 5 5-10 4 13H3z"/></svg>`
+  "Emergency" `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 2"/></svg>`
+-}}
+<aside class="trust-strip" aria-label="Business credentials">
+  <div class="container">
+    <ul class="trust-strip__list">
+      {{- range $t.items }}
+      <li class="trust-strip__item">
+        <span class="trust-strip__icon" aria-hidden="true">{{ index $icons .label | safeHTML }}</span>
+        <span class="trust-strip__text">
+          <span class="label">{{ .label }}</span>
+          <span class="value">{{ .value }}</span>
+        </span>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</aside>

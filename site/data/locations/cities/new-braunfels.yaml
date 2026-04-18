@@ -1,0 +1,53 @@
+slug: new-braunfels
+name: "New Braunfels"
+county: "Comal County"
+state: "TX"
+county_authority: "Comal County Environmental Health (CCEO); City of New Braunfels Health & Food Safety (inside city limits)"
+meta_title: "Septic Pumping in New Braunfels & Canyon Lake | AJ Liquid Waste Haulers"
+meta_description: "Septic pumping for Comal County acreage, Canyon Lake-area subdivisions, and Vintage Oaks aerobic systems. Grease trap service for Gruene and Schlitterbahn-area restaurants. Gallon-metered."
+hero:
+  eyebrow: "Comal County Service"
+  headline: "From Gruene to Canyon Lake."
+  body: "New Braunfels has a deep history and a rapid recent growth spurt — population doubled in the 2010s alone. The city core runs on NBU sewer, but everything beyond the CCN — Canyon Lake's 80+ subdivisions, Vintage Oaks aerobic systems, the Highway 46 corridor — is private septic. That's where we work."
+local_context:
+  heading: "What's specific about Comal County septic"
+  body: "Comal County requires a 1-acre minimum lot size for a septic system on a property with public water — stricter than the half-acre minimum inside New Braunfels city limits. Every OSSF design has to be reviewed by a Registered Sanitarian or Professional Engineer before permits issue. Aerobic systems (common in Vintage Oaks and other upscale acreage developments) require perpetual maintenance contracts."
+  callouts:
+    - title: "Canyon Lake's aging systems"
+      body: "80+ neighborhood subdivisions around Canyon Lake, most built in the 1970s and 1980s. That makes some of the private septic there 40–50 years old. It's some of the oldest septic stock in our service area."
+    - title: "Vintage Oaks aerobic systems"
+      body: "Upscale acreage community on Texas Water Company for water, private aerobic for wastewater. Aerobic surface-irrigation systems are still being permitted here as recently as July 2024. They need active maintenance contracts by rule."
+    - title: "NBU sewer work in Gruene"
+      body: "Final phase of a $7M sewer main rehab project runs through spring 2026 along Gruene Road. If you operate a business in Gruene, you're on NBU sewer — but the project may affect grease trap scheduling during construction windows."
+neighborhoods:
+  heading: "Where we pump in Comal County"
+  body: "Our Comal work concentrates in the unincorporated and fringe areas where septic is the norm."
+  items:
+    - "Canyon Lake subdivisions (Canyon Lake Hills, Canyon Lake Village, and 80+ others)"
+    - "Vintage Oaks at the Vineyard"
+    - "Meyer Ranch and the Highway 46 corridor"
+    - "Rural Spring Branch and Fischer areas"
+    - "Guadalupe County portions of the New Braunfels ETJ"
+    - "Veramendi build-phases before full NBU connection"
+landmarks_served:
+  heading: "Commercial accounts"
+  body: "New Braunfels' commercial base is dense: the Gruene Historic District, Schlitterbahn Waterpark, riverside restaurants, river-tubing outfitters, and wineries and event venues along Highway 46. Most of the core is on NBU sewer and needs grease trap service; venues in unincorporated Comal County operate on commercial OSSF."
+typical_jobs:
+  heading: "What we do most in Comal County"
+  items:
+    - "Residential septic pumping on Canyon Lake subdivisions"
+    - "Aerobic system pumping for Vintage Oaks and Meyer Ranch"
+    - "Grease trap service for Gruene and Schlitterbahn-area restaurants"
+    - "Real estate inspections for Canyon Lake resales"
+    - "Winery and event venue commercial pumping on Highway 46"
+    - "Emergency pumping for older Canyon Lake systems"
+related_services:
+  - "septic-tank-pumping"
+  - "grease-trap-pumping"
+  - "real-estate-inspections"
+  - "emergency-pumping"
+cta:
+  primary: "Get a Free Quote"
+  primary_href: "/contact/"
+  secondary: "Call (512) 956-0047"
+  secondary_href: "tel:+15129560047"

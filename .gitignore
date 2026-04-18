@@ -1,0 +1,33 @@
+# Hugo build output
+site/public/
+site/resources/_gen/
+site/.hugo_build.lock
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Wrangler
+.wrangler/
+
+# Build framework is a separate git repo
+build-framework-ai-optimized/
+
+# Large binary artifacts — keep locally, not in repo
+screenshots/*.png
+aj-build-report.pdf
+GcerR.pdf
+wow.png
+
+# Local-only
+cost-log.md

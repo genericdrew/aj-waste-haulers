@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {{- partial "head.html" . -}}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{- partial "header.html" . -}}
+  <main id="main">
+    {{- block "main" . }}{{ end -}}
+  </main>
+  {{- partial "footer.html" . -}}
+  {{- partial "mobile-cta-bar.html" . -}}
+  {{- partial "schema/common.html" . -}}
+  {{- block "schema" . }}{{ end -}}
+  {{- $siteJS := resources.Get "js/site.js" | resources.Minify | resources.Fingerprint -}}
+  <script src="{{ $siteJS.RelPermalink }}" defer integrity="{{ $siteJS.Data.Integrity }}"></script>
+  {{- block "scripts" . }}{{ end -}}
+</body>
+</html>

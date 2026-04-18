@@ -1,0 +1,55 @@
+{{ define "main" }}
+{{- $f := site.Data.content.faq -}}
+<article>
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">{{ $f.hero.eyebrow }}</span>
+      <h1>{{ $f.hero.headline }}</h1>
+      <p class="page-hero__body">{{ $f.hero.body }}</p>
+    </div>
+  </header>
+
+  <section class="faq-section">
+    <div class="container container-narrow">
+      {{- range $f.categories }}
+      <div class="faq-group">
+        <h2>{{ .heading }}</h2>
+        {{- range .items }}
+        <details class="faq-item">
+          <summary>{{ .question }}</summary>
+          <div class="faq-item__body">
+            <p>{{ .answer }}</p>
+          </div>
+        </details>
+        {{- end }}
+      </div>
+      {{- end }}
+    </div>
+  </section>
+
+  {{ partial "sections/cta-banner.html" . }}
+</article>
+{{ end }}
+
+{{ define "schema" }}
+{{- $f := site.Data.content.faq -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- $first := true -}}
+    {{- range $f.categories -}}
+      {{- range .items -}}
+      {{- if not $first }},{{ end -}}{{- $first = false -}}
+      {
+        "@type": "Question",
+        "name": "{{ .question }}",
+        "acceptedAnswer": { "@type": "Answer", "text": "{{ .answer }}" }
+      }
+      {{- end -}}
+    {{- end }}
+  ]
+}
+</script>
+{{ end }}

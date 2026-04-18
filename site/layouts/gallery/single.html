@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{- $g := site.Data.content.gallery -}}
+<article>
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">{{ $g.hero.eyebrow }}</span>
+      <h1>{{ $g.hero.headline }}</h1>
+      <p class="page-hero__body">{{ $g.hero.body }}</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      {{- if gt (len $g.items) 0 }}
+      <div class="services-index-grid">
+        {{- range $g.items }}
+        <figure>
+          <img src="{{ .src }}" alt="{{ .alt }}" loading="lazy">
+          {{- with .caption }}<figcaption>{{ . }}</figcaption>{{- end }}
+        </figure>
+        {{- end }}
+      </div>
+      {{- else }}
+      <div class="testimonial-empty">
+        <p>Photography in progress. We're adding authentic fleet, meter, and job-site photos — no stock images.</p>
+        <p style="margin-top: 0.75rem;"><a href="/contact/">Have a project you'd like us to photograph?</a></p>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+
+  {{ partial "sections/cta-banner.html" . }}
+</article>
+{{ end }}

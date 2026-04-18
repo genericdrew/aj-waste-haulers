@@ -1,0 +1,87 @@
+{{ define "main" }}
+{{- $a := site.Data.content.about -}}
+<article>
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">{{ $a.hero.eyebrow }}</span>
+      <h1>{{ $a.hero.headline }}</h1>
+      <p class="page-hero__body">{{ $a.hero.body }}</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2>{{ $a.founders.heading }}</h2>
+      <div class="founders-grid">
+        {{- range $a.founders.people }}
+        <article class="founder-card">
+          <h3>{{ .name }}</h3>
+          <div class="role">{{ .role }}</div>
+          <p>{{ .bio }}</p>
+        </article>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-bone">
+    <div class="container">
+      <h2>{{ $a.values.heading }}</h2>
+      <div class="values-grid">
+        {{- range $a.values.items }}
+        <div class="value-card">
+          <h4>{{ .title }}</h4>
+          <p>{{ .body }}</p>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-narrow">
+      <h2>{{ $a.credentials.heading }}</h2>
+      <div class="credentials-grid">
+        {{- range $a.credentials.items }}
+        <div class="credential">
+          <strong>{{ .label }}</strong>
+          <span>{{ .detail }}</span>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+
+  {{ partial "sections/cta-banner.html" . }}
+</article>
+{{ end }}
+
+{{ define "schema" }}
+{{- $a := site.Data.content.about -}}
+{{- $site := site.Data.content.site -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "@id": "{{ site.BaseURL }}#business",
+    "name": "{{ $site.legal_name }}",
+    "url": "{{ site.BaseURL }}",
+    "foundingDate": "{{ $site.founded }}",
+    "employee": [
+      {{- range $i, $p := $a.founders.people -}}
+      {{ if $i }},{{ end }}
+      {
+        "@type": "Person",
+        "name": "{{ $p.name }}",
+        "jobTitle": "{{ $p.role }}",
+        "worksFor": { "@id": "{{ site.BaseURL }}#business" },
+        "description": "{{ $p.bio }}"
+      }
+      {{- end -}}
+    ]
+  }
+}
+</script>
+{{ end }}

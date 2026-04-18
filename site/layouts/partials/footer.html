@@ -1,0 +1,39 @@
+{{- $f := site.Data.content.footer -}}
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <h3>AJ Liquid Waste Haulers</h3>
+        <p>{{ $f.description }}</p>
+        <a href="{{ $f.phone_href | safeURL }}" class="phone">{{ $f.phone }}</a><br>
+        <a href="mailto:{{ $f.email }}" style="color: var(--color-bone-100); opacity: 0.85; text-decoration: none; font-size: var(--text-body-sm);">{{ $f.email }}</a>
+        <p style="margin-top: 0.75rem; font-size: var(--text-body-sm);">{{ $f.address }} · {{ $f.hours }}</p>
+      </div>
+
+      {{- range $f.nav_columns }}
+      <div class="site-footer__col">
+        <h4>{{ .heading }}</h4>
+        <ul>
+          {{- range .links }}
+          <li><a href="{{ .href }}">{{ .text }}</a></li>
+          {{- end }}
+        </ul>
+      </div>
+      {{- end }}
+
+      <div class="site-footer__col">
+        <h4>{{ site.Data.content.ui.footer_top_areas_heading }}</h4>
+        <ul>
+          {{- range $f.top_areas }}
+          <li><a href="{{ .href }}">{{ .name }}</a></li>
+          {{- end }}
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span class="site-footer__trust">{{ $f.trust_line }}</span>
+      <span class="site-footer__copyright">{{ $f.copyright_prefix }}{{ now.Format "2006" }} {{ $f.copyright_suffix }}</span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,41 @@
+baseURL = "https://ajliquidwastehaulers.com/"
+languageCode = "en-us"
+title = "AJ Liquid Waste Haulers"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+enableGitInfo = false
+
+# Disable taxonomies — not needed
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Family-owned septic and liquid waste hauler based in Dripping Springs, TX. Gallon-metered pumping for the Texas Hill Country. TCEQ licensed."
+  phone = "(512) 956-0047"
+  phone_href = "tel:+15129560047"
+  email = "office@ajliquidwastehaulers.com"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[minify]
+  [minify.tdewolff.html]
+    keepDocumentTags = true
+    keepEndTags = true
+
+[build]
+  writeStats = false
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["HTML"]
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.7
+  filename = "sitemap.xml"
+
+[caches]
+  [caches.images]
+    dir = ":resourceDir/_gen"
+    maxAge = "720h"

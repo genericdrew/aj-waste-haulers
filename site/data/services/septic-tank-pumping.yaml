@@ -1,0 +1,42 @@
+slug: septic-tank-pumping
+name: "Septic Tank Pumping"
+audience: "residential"
+meta_title: "Septic Tank Pumping in Dripping Springs, Austin & Hill Country | AJ"
+meta_description: "Gallon-metered septic tank pumping for Hill Country homeowners. Serving Dripping Springs, Austin, Kyle, New Braunfels, Driftwood. TCEQ licensed. Same-day service when available."
+hero:
+  eyebrow: "Residential & Commercial"
+  headline: "Metered septic pumping. Honest paperwork."
+  body: "We pump residential and commercial septic tanks across the Hill Country and bill by the gallon, not the guess. Every load goes to a TCEQ-approved facility, documented."
+what_we_do:
+  heading: "What a septic pumping looks like with us"
+  body: "We locate your access risers, connect the gallon meter, pump the tank start to finish, inspect baffles and flow while we're there, and walk you through what we saw before we leave. Every stage is explained — no black-box work."
+  bullets:
+    - "Residential tanks, typically 500–1,500 gallons"
+    - "Commercial septic systems where applicable"
+    - "Buried or hard-to-access tanks (probe + excavate included)"
+    - "Baffle inspection at no extra cost"
+    - "Sludge depth reading and honest recommendation on next pumping interval"
+    - "Manifested disposal at TCEQ-approved facilities"
+when_to_pump:
+  heading: "When should you pump?"
+  body: "TCEQ's rule of thumb is every 3–5 years. Their own published table tightens that to roughly every 2.6 years for a 4-person household on a 1,000-gallon tank. Use our estimator for a specific number, or call and we'll talk through your situation."
+  cta: "Try the estimator"
+  cta_href: "/#estimator"
+process_ref: true  # Renders shared 5-step process component
+faqs:
+  - question: "How long does it take?"
+    answer: "Thirty to ninety minutes for most residential jobs. Buried access or unusual tank configurations can push it longer."
+  - question: "Will you tear up my yard?"
+    answer: "We try hard not to. Our trucks have longer hose runs than most, so we can usually reach from the drive. When we have to cross lawn, we protect it."
+  - question: "Do I need to be home?"
+    answer: "Preferred but not required. If the tank is accessible and gates are unlocked, we can pump and send you photos + the meter reading after."
+  - question: "What if you find something wrong?"
+    answer: "We tell you. We're not a repair company — we won't sell you a new drain field. We'll document what we saw and recommend who to call if you need a repair."
+related:
+  - "real-estate-inspections"
+  - "emergency-pumping"
+cta:
+  primary: "Get a Free Quote"
+  primary_href: "/contact/"
+  secondary: "Call (512) 956-0047"
+  secondary_href: "tel:+15129560047"

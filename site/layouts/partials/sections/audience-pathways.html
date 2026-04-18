@@ -1,0 +1,24 @@
+{{- $a := site.Data.content.audience_pathways -}}
+{{- $icons := dict
+  "home" `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 12 12 4l9 8"/><path d="M5 10v10h14V10"/></svg>`
+  "commercial" `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="8" width="18" height="13"/><path d="M7 8V4h10v4M10 14h4"/></svg>`
+  "beverage" `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3h12l-2 8a4 4 0 0 1-8 0L6 3z"/><path d="M12 15v6M9 21h6"/></svg>`
+-}}
+<section class="audience-pathways section" aria-labelledby="audience-heading">
+  <div class="container">
+    <header class="section-header">
+      <h2 id="audience-heading">{{ $a.headline }}</h2>
+      <p>{{ $a.subhead }}</p>
+    </header>
+    <div class="audience-pathways__grid">
+      {{- range $a.cards }}
+      <article class="audience-card">
+        <span class="audience-card__icon" aria-hidden="true">{{ index $icons .icon | safeHTML }}</span>
+        <h3 class="audience-card__title">{{ .audience }}</h3>
+        <p class="audience-card__body">{{ .description }}</p>
+        <a href="{{ .cta_href }}" class="audience-card__cta">{{ .cta }}</a>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+{{- $site := site.Data.content.site -}}
+{{- $nav := site.Data.content.nav -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "{{ site.BaseURL }}#business",
+      "name": "{{ $site.legal_name }}",
+      "alternateName": "{{ $site.name }}",
+      "description": "{{ $site.description }}",
+      "url": "{{ site.BaseURL }}",
+      "telephone": "{{ $site.phone }}",
+      "email": "{{ $site.email }}",
+      "priceRange": "$$",
+      "foundingDate": "{{ $site.founded }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ $site.address_city }}",
+        "addressRegion": "{{ $site.address_state }}",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {{- range $i, $c := site.Data.content.service_area.primary_cities -}}
+        {{ if $i }},{{ end }}
+        { "@type": "City", "name": "{{ $c.name }}, TX" }
+        {{- end -}}
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "sameAs": [
+        {{- with $site.socials.facebook -}}"{{ . }}"{{- end -}}
+        {{- with $site.socials.instagram -}}, "{{ . }}"{{- end -}}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.BaseURL }}#website",
+      "url": "{{ site.BaseURL }}",
+      "name": "{{ $site.name }}",
+      "publisher": { "@id": "{{ site.BaseURL }}#business" },
+      "inLanguage": "en-US"
+    }
+  ]
+}
+</script>

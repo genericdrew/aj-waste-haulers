@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{- $sa := site.Data.content.service_area_hub -}}
+{{- $cities := site.Data.locations.cities -}}
+{{- $primary := site.Data.content.service_area.primary_cities -}}
+<article>
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">{{ $sa.hero.eyebrow }}</span>
+      <h1>{{ $sa.hero.headline }}</h1>
+      <p class="page-hero__body">{{ $sa.hero.body }}</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="city-hub-grid">
+        {{- range $primary }}
+        {{- $c := index $cities .slug }}
+        <a href="/service-area/{{ .slug }}/" class="city-hub-card">
+          <h3>{{ .name }}, TX</h3>
+          <p>{{ .county }}. {{ with $c }}{{ .hero.body | truncate 140 }}{{ end }}</p>
+        </a>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+
+  {{ partial "sections/cta-banner.html" . }}
+</article>
+{{ end }}

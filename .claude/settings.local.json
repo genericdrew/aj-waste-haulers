@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:ajliquidwastehaulers.com)",
+      "WebSearch",
+      "WebFetch(domain:www.tceq.texas.gov)",
+      "WebFetch(domain:hillcountrywastewater.com)",
+      "WebFetch(domain:aplussepticaustin.com)",
+      "WebFetch(domain:www.superiorseptictx.net)",
+      "WebFetch(domain:alohaseptic.com)",
+      "WebFetch(domain:septicmarketing.us)",
+      "WebFetch(domain:www.allamericansepticsolutions.com)",
+      "WebFetch(domain:hookagency.com)",
+      "WebFetch(domain:a-actionseptic.com)",
+      "WebFetch(domain:texasprideouthouse.com)",
+      "WebFetch(domain:www.yelp.com)",
+      "WebFetch(domain:revved.digital)",
+      "WebFetch(domain:communityimpact.com)",
+      "Bash(grep -cE \"^\\\\| \\\\`--color-\" site/CLAUDE.md)",
+      "Bash(grep -nE \"#[0-9a-fA-F]{3,6}\" site/assets/css/main.css site/assets/css/_tokens.css)",
+      "Bash(grep -vE \"^\\(_default|partials|index.html|page\\)$\")",
+      "Bash(cat)"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{{- $c := site.Data.content.cta_banner -}}
+<section class="cta-banner" aria-labelledby="cta-banner-heading">
+  <div class="container">
+    <div class="cta-banner__inner">
+      <span class="eyebrow">{{ $c.eyebrow }}</span>
+      <h2 id="cta-banner-heading">{{ $c.headline }}</h2>
+      <p class="cta-banner__body">{{ $c.body }}</p>
+      <div class="cta-banner__ctas">
+        <a href="{{ $c.primary_cta_href }}" class="btn btn-primary">{{ $c.primary_cta }}</a>
+        <a href="{{ $c.secondary_cta_href | safeURL }}" class="btn btn-secondary">{{ $c.secondary_cta }}</a>
+      </div>
+      <p class="cta-banner__supporting">{{ $c.supporting_line }}</p>
+    </div>
+  </div>
+</section>

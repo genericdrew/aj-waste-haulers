@@ -1,0 +1,67 @@
+{{ define "main" }}
+{{- $c := site.Data.content.contact -}}
+<article>
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">{{ $c.hero.eyebrow }}</span>
+      <h1>{{ $c.hero.headline }}</h1>
+      <p class="page-hero__body">{{ $c.hero.body }}</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+        <div>
+          <h2>Reach us</h2>
+          <ul class="contact-methods">
+            {{- range $c.contact_methods }}
+            <li class="contact-method">
+              <span class="label">{{ .label }}</span>
+              {{- if .href }}
+              <a class="value" href="{{ .href | safeURL }}">{{ .value }}</a>
+              {{- else }}
+              <span class="value">{{ .value }}</span>
+              {{- end }}
+              <div class="note">{{ .note }}</div>
+            </li>
+            {{- end }}
+          </ul>
+        </div>
+        <div>
+          <h2>{{ $c.form.heading }}</h2>
+          <p>{{ $c.form.subhead }}</p>
+          <form class="form" method="post" action="#" aria-label="Request a quote">
+            {{- $row := false -}}
+            <div class="form__row">
+              {{- range first 2 $c.form.fields }}
+              {{- partial "form-field.html" . -}}
+              {{- end }}
+            </div>
+            <div class="form__row">
+              {{- range after 2 (first 4 $c.form.fields) }}
+              {{- partial "form-field.html" . -}}
+              {{- end }}
+            </div>
+            {{- range after 4 $c.form.fields }}
+            {{- partial "form-field.html" . -}}
+            {{- end }}
+            <button type="submit" class="btn btn-primary" style="justify-self: start; margin-top: 0.5rem;">{{ $c.form.submit_label }}</button>
+            <p class="form__privacy">{{ $c.form.privacy_note }}</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+{{ end }}
+
+{{ define "schema" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "mainEntity": { "@id": "{{ site.BaseURL }}#business" }
+}
+</script>
+{{ end }}

@@ -1,0 +1,56 @@
+{{- $p := site.Data.content.process -}}
+{{- $e := site.Data.content.estimator -}}
+<section class="process-estimator section" aria-labelledby="process-heading">
+  <div class="container">
+    <header class="section-header">
+      <span class="eyebrow">{{ $p.eyebrow }}</span>
+      <h2 id="process-heading">{{ $p.headline }}</h2>
+      <p>{{ $p.subhead }}</p>
+    </header>
+
+    <ol class="process__steps" aria-label="Steps of a pumping visit">
+      {{- range $p.steps }}
+      <li class="process-step">
+        <span class="process-step__num">{{ .number }}</span>
+        <h3 class="process-step__title">{{ .title }}</h3>
+        <p class="process-step__body">{{ .body }}</p>
+      </li>
+      {{- end }}
+    </ol>
+
+    <div class="estimator" data-estimator data-prefix="{{ $e.result_prefix }}" data-suffix="{{ $e.result_suffix }}" data-overdue="{{ $e.overdue_message }}">
+      <div class="estimator__grid">
+        <div class="estimator__intro">
+          <span class="eyebrow">{{ $e.eyebrow }}</span>
+          <h3>{{ $e.headline }}</h3>
+          <p>{{ $e.body }}</p>
+        </div>
+        <div class="estimator__form">
+          <div class="estimator__field">
+            <label for="est-hh">{{ $e.household_label }}</label>
+            <select id="est-hh" class="estimator__select" data-estimator-household>
+              {{- range $e.household_options }}
+              <option value="{{ .value }}">{{ .text }}</option>
+              {{- end }}
+            </select>
+          </div>
+          <div class="estimator__field">
+            <label for="est-tk">{{ $e.tank_label }}</label>
+            <select id="est-tk" class="estimator__select" data-estimator-tank>
+              {{- range $e.tank_options }}
+              <option value="{{ .value }}">{{ .text }}</option>
+              {{- end }}
+            </select>
+          </div>
+          <div class="estimator__result" role="status" aria-live="polite" data-estimator-output>
+            <span data-estimator-result>Select a household size and tank size to see your estimate.</span>
+          </div>
+          <div class="estimator__cta">
+            <a href="{{ $e.cta_href }}" class="btn btn-primary">{{ $e.cta }}</a>
+            <span class="estimator__disclaimer">{{ $e.disclaimer }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

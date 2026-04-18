@@ -1,0 +1,52 @@
+slug: austin
+name: "Austin"
+county: "Travis County"
+state: "TX"
+county_authority: "Austin Water OSSF Program + Travis County TNR (jurisdiction depends on location)"
+meta_title: "Septic Pumping & Grease Trap Service in Austin, TX | AJ Liquid Waste Haulers"
+meta_description: "Serving west and south Austin septic systems and commercial grease traps. Austin 90-day FOG compliance. Gallon-metered pumping. TCEQ licensed. Call (512) 956-0047."
+hero:
+  eyebrow: "Serving West & South Austin"
+  headline: "Austin's a sewer town. Until it isn't."
+  body: "Large parts of west and south Austin — the Barton Creek corridor, Bear Creek watershed, the FM 1826 acreage tracts toward Hays County — never got city sewer. That's where we work. Plus grease trap service for restaurants across the metro, on a 90-day cycle that keeps the city off your back."
+local_context:
+  heading: "Two things to know about Austin septic"
+  body: "First: jurisdiction is messy. Austin Water, Travis County TNR, and LCRA all have authority depending on where the property sits. We'll help you figure out whose rule applies. Second: Austin has its own nitrogen-reduction rule that exceeds the state TCEQ minimum — Chapter 15-5 of the city code requires a 20 mg/L nitrogen cap on new systems in the Edwards Aquifer Recharge Zone and parts of the Contributing Zone. Not every hauler keeps up with that."
+  callouts:
+    - title: "Nitrogen-reduction systems"
+      body: "Nitrogen-reducing and commercial aerobic systems inside Austin Water's jurisdiction require a perpetual maintenance contract with a certified service provider. Homeowners can't self-maintain."
+    - title: "The Barton Springs Zone"
+      body: "At least 9,470 OSSF permits exist in the Barton Springs segment of the Edwards Aquifer alone. Bear Creek has the highest density. We pump here often."
+    - title: "90-day grease trap rule"
+      body: "Inside city limits, food service grease traps must be pumped every 90 days or when grease/solids reach 50% of wetted height. Fines up to $2,000 per violation."
+neighborhoods:
+  heading: "Where we work in Austin"
+  body: "Most of our Austin septic work is in the western and southern rings — the places where the city never extended sewer and probably never will. Grease trap work covers the whole metro."
+  items:
+    - "Barton Hills and the Barton Creek corridor"
+    - "Oak Hill and southwest Austin"
+    - "FM 1826 acreage tracts toward Dripping Springs"
+    - "Slaughter-Manchaca corridor"
+    - "Bee Cave Rd and RR 620 western fringe"
+    - "Far south Austin rural-residential lots"
+landmarks_served:
+  heading: "Austin commercial accounts"
+  body: "Restaurants, food trucks with brick-and-mortar kitchens, commercial kitchens, and hospitality venues across the metro. We run 90-day grease trap cycles and handle the City of Austin FOG compliance documentation."
+typical_jobs:
+  heading: "What we do most in Austin"
+  items:
+    - "Residential septic pumping in west and south Austin acreage lots"
+    - "90-day grease trap service for restaurants inside city limits"
+    - "Commercial aerobic system pumping and inspection"
+    - "Real estate septic inspections for home sales in ETJ"
+    - "Emergency pumping for urban-fringe homes during evening and weekend failures"
+related_services:
+  - "grease-trap-pumping"
+  - "septic-tank-pumping"
+  - "emergency-pumping"
+  - "real-estate-inspections"
+cta:
+  primary: "Get a Free Quote"
+  primary_href: "/contact/"
+  secondary: "Call (512) 956-0047"
+  secondary_href: "tel:+15129560047"

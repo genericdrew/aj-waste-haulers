@@ -1,0 +1,61 @@
+slug: driftwood
+name: "Driftwood"
+county: "Hays County"
+state: "TX"
+county_authority: "Hays County Development Services (OSSF program)"
+meta_title: "Septic & Liquid Waste Hauling in Driftwood, TX | AJ"
+meta_description: "Driftwood has no sewer. 100% of properties — Salt Lick BBQ, Duchman Winery, Vista Brewing, Desert Door, and 180+ event venues — run on private septic. We service all of it. TCEQ licensed."
+hero:
+  eyebrow: "100% Septic Country"
+  headline: "No sewer. Just us, the trucks, and every winery on FM 150."
+  body: "There is no City of Driftwood. There's no municipal wastewater system. Every home, every restaurant, every winery, every brewery, every distillery, every one of the 180+ event venues in ZIP 78619 runs on private septic. That makes Driftwood one of the densest commercial liquid-waste markets in the Hill Country — and a big part of what we do."
+local_context:
+  heading: "The waste side of wine country"
+  body: "Driftwood's identity is wineries, barbecue, and weddings. That identity sits on top of a privately operated septic infrastructure that nobody else sees. Salt Lick BBQ is on septic. Duchman Family Winery is on septic. Vista Brewing is on septic. Desert Door Sotol is on septic. The unincorporated area is governed by Hays County OSSF rules, which means every property needs a permit regardless of lot size and every aerobic system needs an active maintenance contract."
+  callouts:
+    - title: "No municipal sewer anywhere"
+      body: "It's not coming. Hays County won't extend a line to an unincorporated community. Plan accordingly — your septic is permanent infrastructure."
+    - title: "Commercial process-waste volume"
+      body: "Wineries produce pomace slurry. Breweries produce spent-grain slurry and yeast. Distilleries produce stillage. Restaurants produce grease. Event venues produce concentrated human waste on event days. Each needs a different disposal chain."
+    - title: "Trinity Aquifer overhead"
+      body: "The Hays Trinity Groundwater Conservation District oversees groundwater here. Drain-field failures have direct groundwater consequences. We pump and inspect with that in mind."
+neighborhoods:
+  heading: "Where we work in Driftwood"
+  body: "Rural acreage across FM 150, FM 1826, and the RR-12 corridor. Lot sizes from half an acre up to 100+ acre ranches. Liberty Ranch (~15 lots, 100 acres each) and The Vineyard area are the high-end parcels we know well."
+  items:
+    - "FM 150 winery corridor"
+    - "FM 1826 between Driftwood and Austin"
+    - "RR-12 toward Wimberley"
+    - "Liberty Ranch and larger ranch parcels"
+    - "The Vineyard and similar rural-residential developments"
+landmarks_served:
+  heading: "Commercial accounts in Driftwood"
+  body: "Driftwood hosts one of Texas's most famous barbecue destinations and a concentration of wineries, breweries, and distilleries that defines the Hill Country craft beverage corridor. Every one of them operates on commercial OSSF."
+  named_venues:
+    - "Salt Lick BBQ (18300 FM 1826)"
+    - "Duchman Family Winery"
+    - "Driftwood Estate Winery"
+    - "Vista Brewing"
+    - "Twisted X Brewing"
+    - "Desert Door Texas Sotol"
+    - "Mercer Dancehall"
+    - "Salt Lick Cellars"
+typical_jobs:
+  heading: "What we do most in Driftwood"
+  items:
+    - "Winery pomace slurry and tank wash hauling"
+    - "Distillery stillage and CIP waste removal"
+    - "Brewery spent-grain and fermenter cleaning waste"
+    - "Commercial kitchen grease trap service"
+    - "Event-venue pump-outs during high-traffic weekends"
+    - "Residential septic pumping on rural-acreage homes"
+related_services:
+  - "beverage-industry-waste"
+  - "grease-trap-pumping"
+  - "septic-tank-pumping"
+  - "emergency-pumping"
+cta:
+  primary: "Get a Free Quote"
+  primary_href: "/contact/"
+  secondary: "Call (512) 956-0047"
+  secondary_href: "tel:+15129560047"

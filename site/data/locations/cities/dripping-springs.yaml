@@ -1,0 +1,52 @@
+slug: dripping-springs
+name: "Dripping Springs"
+county: "Hays County"
+state: "TX"
+county_authority: "Hays County Development Services (OSSF program)"
+meta_title: "Septic Pumping in Dripping Springs, TX | AJ Liquid Waste Haulers"
+meta_description: "We're based in Dripping Springs. Septic pumping, grease traps, and beverage-industry waste for homes, wineries, breweries, and wedding venues across Hays County. Gallon-metered. TCEQ licensed."
+hero:
+  eyebrow: "Our Home Market"
+  headline: "Dripping Springs septic, by the Dripping Springs locals."
+  body: "Our trucks are parked here. This isn't a 'service area' on a map — it's where we live, where our kids go to school, and where we already know most of the hard-to-find tanks."
+local_context:
+  heading: "What we know about septic here"
+  body: "Dripping Springs sits on top of the Trinity Aquifer recharge zone managed by the Hays Trinity Groundwater Conservation District. Hays County requires OSSF permits for every property — there's no lot-size exemption like some other Texas counties. And because most of the commercial corridor along US-290 and RR-12 has no municipal sewer, every wedding venue, winery, and distillery in town is on private septic. We work with most of them."
+  callouts:
+    - title: "Trinity Aquifer overhead"
+      body: "Your septic system sits directly over a recharge zone. Drain-field failures here matter more than they would three counties east. We inspect with that in mind."
+    - title: "Mandatory aerobic maintenance"
+      body: "Hays County requires a maintenance contract for every aerobic and advanced-treatment system. If yours lapsed, get it back in place — we can refer you to licensed service providers."
+    - title: "Commercial OSSF is the default"
+      body: "Outside city limits, there's no sewer. Every venue and production facility along Fitzhugh Road, RR-12, and the US-290 corridor depends on private septic and licensed haulers."
+neighborhoods:
+  heading: "Where we pump in Dripping Springs"
+  body: "Rural acreage west of SH-12 is our bread and butter. Older conventional tanks, 2–5 acre parcels, some never pumped since install. The big master-planned communities — Belterra, Highpointe, Caliterra, Headwaters — mostly run on community wastewater systems, but the infill acreage around them is all septic."
+  items:
+    - "Rural acreage west of SH-12"
+    - "Fitzhugh Road corridor (commercial + residential mix)"
+    - "Pre-1990 ranch-division lots (2–60 acres)"
+    - "RR-12 corridor toward Wimberley"
+    - "US-290 commercial corridor (wedding venues, distilleries)"
+landmarks_served:
+  heading: "Places you might know"
+  body: "We service commercial accounts across Dripping Springs' beverage and event cluster. The city is the legislatively designated Wedding Capital of Texas and the unofficial Distillery Capital — over 35 wedding venues within 15 square miles and a distillery cluster that includes Treaty Oak, Desert Door Sotol, Deep Eddy Vodka, Crowded Barrel Whiskey, and 12 Fox Brewery."
+typical_jobs:
+  heading: "What we do most here"
+  items:
+    - "Residential septic pumping on 3–5 year cycles for acreage homes"
+    - "Commercial OSSF service for wedding venues during event seasons"
+    - "Distillery stillage and CIP waste hauling"
+    - "Brewery spent-grain slurry and fermenter cleanings"
+    - "Winery pomace slurry and tank wash water"
+    - "Emergency pumping for venues during high-volume weekends"
+related_services:
+  - "septic-tank-pumping"
+  - "beverage-industry-waste"
+  - "emergency-pumping"
+  - "real-estate-inspections"
+cta:
+  primary: "Get a Free Quote"
+  primary_href: "/contact/"
+  secondary: "Call (512) 956-0047"
+  secondary_href: "tel:+15129560047"

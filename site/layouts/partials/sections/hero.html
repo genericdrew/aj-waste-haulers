@@ -1,0 +1,15 @@
+{{- $h := site.Data.content.hero -}}
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero__content">
+      <div class="hero__eyebrow">{{ $h.eyebrow }}</div>
+      <h1 id="hero-heading">{{ $h.headline }}</h1>
+      <p class="hero__body">{{ $h.body }}</p>
+      <div class="hero__ctas">
+        <a href="{{ $h.cta_href }}" class="btn btn-primary">{{ $h.cta }}</a>
+        <a href="{{ $h.secondary_cta_href | safeURL }}" class="btn btn-secondary">{{ $h.secondary_cta }}</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+slug: beverage-industry-waste
+name: "Winery, Brewery & Distillery Waste Removal"
+audience: "beverage"
+meta_title: "Winery, Brewery & Distillery Waste Removal | Texas Hill Country | AJ"
+meta_description: "Specialized liquid waste hauling for wineries, breweries, and distilleries in the Texas Hill Country. Spent mash, stillage, pomace slurry, wash water — measured, manifested, TCEQ-approved disposal."
+hero:
+  eyebrow: "Craft Beverage Producers"
+  headline: "Spent mash, stillage, pomace. We speak fermenter."
+  body: "The Hill Country has 100+ wineries and a growing distillery cluster centered on Dripping Springs — the legislatively designated Distillery Capital of Texas. Most septic haulers don't know what to do with beverage-industry waste. We do."
+what_we_do:
+  heading: "What we haul"
+  body: "Liquid waste streams unique to beverage production. Viscous, high-solids, sometimes high-sugar or high-alcohol. We have the equipment, the disposal partners, and the documentation chain to handle it without blocking your production schedule."
+  bullets:
+    - "Distillery stillage (post-distillation residue from mash)"
+    - "Brewery spent grain slurry and fermenter cleanings"
+    - "Winery pomace slurry and tank wash water"
+    - "CIP (clean-in-place) waste and caustic wash"
+    - "Fermenter and tank bottom cleanouts"
+    - "Emergency haulouts during batch changes or equipment failure"
+why_us:
+  heading: "Why beverage producers call AJ"
+  items:
+    - title: "We understand the waste stream"
+      body: "Stillage isn't septic sludge. Pomace isn't grease. Wrong hauler, wrong truck, wrong disposal — we've seen the mistakes. We don't make them."
+    - title: "Documentation for your TTB and TCEQ records"
+      body: "Every haul is manifested. Gallon meter reading on the invoice. Disposal facility named. Auditable chain, start to finish."
+    - title: "Schedule around your batch timing"
+      body: "Post-run cleanups, seasonal harvest surges, fermenter turnover — we fit the cadence. You shouldn't delay a batch because a truck didn't show."
+    - title: "Dripping Springs HQ"
+      body: "We're in the middle of the Hill Country beverage corridor. Response time is measured in minutes, not hours."
+clients_served:
+  heading: "Who we work with"
+  body: "Wineries in the Texas Hill Country AVA. Craft distilleries along the US-290 corridor. Breweries in Dripping Springs, Driftwood, Spicewood, and surrounding communities. Commercial kitchens attached to winery tasting rooms."
+faqs:
+  - question: "Can you haul during a production run?"
+    answer: "Usually yes, if access is safe. We've done mid-run swaps for distilleries on long batches. Give us the schedule and we'll fit."
+  - question: "What about high-BOD wash water from CIP cycles?"
+    answer: "Yes. High-BOD liquid waste is part of what we're set up for. Where it goes depends on the facility and jurisdiction — we'll walk you through the disposal chain."
+  - question: "Do you handle pomace?"
+    answer: "Pomace slurry yes. Dry pomace (solids only) typically goes to compost; we can connect you with a partner for that."
+  - question: "Can you provide a service agreement for our TTB records?"
+    answer: "Yes. Written agreement, per-haul documentation, annual summary on request."
+related:
+  - "grease-trap-pumping"
+  - "emergency-pumping"
+cta:
+  primary: "Discuss Your Waste Stream"
+  primary_href: "/contact/"
+  secondary: "Call (512) 956-0047"
+  secondary_href: "tel:+15129560047"

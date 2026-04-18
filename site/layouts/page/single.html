@@ -1,0 +1,50 @@
+{{ define "main" }}
+{{- $key := .Params.content_key -}}
+{{- $p := index site.Data.content $key -}}
+{{- if not $p -}}{{ errorf "No data key %q in content.yaml" $key }}{{- end -}}
+<article>
+  <header class="page-hero">
+    <div class="container">
+      <span class="eyebrow">{{ $p.hero.eyebrow }}</span>
+      <h1>{{ $p.hero.headline }}</h1>
+      <p class="page-hero__body">{{ $p.hero.body }}</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container container-narrow prose">
+      {{- with $p.sections }}
+      {{- range . }}
+      <h2>{{ .heading }}</h2>
+      <p>{{ .body }}</p>
+      {{- end }}
+      {{- end }}
+
+      {{- with $p.steps }}
+      <h2>The 5 steps</h2>
+      <ol>
+        {{- range . }}
+        <li><strong>{{ .title }}</strong> — {{ .body }}</li>
+        {{- end }}
+      </ol>
+      {{- end }}
+    </div>
+  </section>
+
+  {{- with $p.cta }}
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner">
+        <h2>Ready to talk?</h2>
+        <div class="cta-banner__ctas">
+          <a href="{{ $p.cta_href }}" class="btn btn-primary">{{ . }}</a>
+          <a href="{{ "tel:+15129560047" | safeURL }}" class="btn btn-secondary">Call (512) 956-0047</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{- else }}
+  {{ partial "sections/cta-banner.html" . }}
+  {{- end }}
+</article>
+{{ end }}

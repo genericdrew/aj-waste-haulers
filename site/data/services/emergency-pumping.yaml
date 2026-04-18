@@ -1,0 +1,44 @@
+slug: emergency-pumping
+name: "24/7 Emergency Septic Pumping"
+audience: "emergency"
+meta_title: "24/7 Emergency Septic Pumping | Dripping Springs, Austin, Hill Country | AJ"
+meta_description: "Septic emergency at 2 AM on a Sunday? Text your address. AJ runs 24/7 emergency response across the Hill Country. Fast arrival, gallon-metered, TCEQ-approved disposal."
+hero:
+  eyebrow: "Backing Up Right Now?"
+  headline: "Text the address. We'll roll."
+  body: "Sewage in the house, drain field smelling, tank overflowing? It doesn't matter what time it is. Text (512) 956-0047 with your name, address, and what's happening. Someone will respond."
+  primary_cta: "Text (512) 956-0047"
+  primary_cta_href: "sms:+15129560047"
+  secondary_cta: "Call (512) 956-0047"
+  secondary_cta_href: "tel:+15129560047"
+what_counts:
+  heading: "What counts as an emergency"
+  body: "If you're asking whether it's an emergency, text us. We'd rather tell you 'wait until Monday' than leave you guessing. That said — these are the situations we consider real emergencies:"
+  bullets:
+    - "Sewage backing up into the house through drains or fixtures"
+    - "Toilets that won't flush anywhere in the home"
+    - "Standing effluent in the yard with a septic smell"
+    - "Tank overflow visible at ground level"
+    - "Commercial restroom or grease trap failure during business hours"
+    - "Real estate closing scheduled and the tank just failed"
+response:
+  heading: "What response time looks like"
+  body: "Same day is the goal when a truck is available. Nights and weekends typically run a few hours depending on drive distance across the Hill Country. If you're three hours from our HQ, we'll tell you honestly — and help you find someone closer if we can't make the window."
+what_we_do:
+  heading: "Emergency pumping, done right"
+  body: "Even in an emergency, we don't skip steps. The meter still goes on. The disposal still gets manifested. The inspection still happens, as much as conditions allow. The work doesn't change just because the clock does."
+faqs:
+  - question: "What will it cost?"
+    answer: "More than a scheduled pumping — overnight and weekend calls carry a response fee. We quote the number before the truck rolls, and we stick to it."
+  - question: "What should I do while I wait?"
+    answer: "Stop using water in the house. No showers, no laundry, no dishwasher. If sewage is in the home, open windows and keep kids and pets away from the area. If you smell gas or see an electrical issue, call 911 first."
+  - question: "Can you help if I'm outside your normal service area?"
+    answer: "Maybe. Text the address — we'll tell you if we can make it, and if not, we'll point you to another hauler."
+related:
+  - "septic-tank-pumping"
+  - "grease-trap-pumping"
+cta:
+  primary: "Text Now"
+  primary_href: "sms:+15129560047"
+  secondary: "Call (512) 956-0047"
+  secondary_href: "tel:+15129560047"
